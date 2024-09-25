@@ -12,7 +12,9 @@
             <RowDefinition Height="51" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="White" />
+        <Grid Grid.Row="0" Background="White">
+            <Label Content="Lukewire129" />
+        </Grid>
         <Grid Grid.Row="1" Background="#F4F6F8" />
     </Grid>
 </Page>
