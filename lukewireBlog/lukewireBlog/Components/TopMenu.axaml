@@ -1,0 +1,47 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:lukewireBlog.Components"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="10,0">
+            <controls:TopMenu>
+                <controls:TopMenuItem Text="Home" />
+                <controls:TopMenuItem Text="Home1" />
+                <controls:TopMenuItem Text="Home2" />
+                <controls:TopMenuItem Text="Home3" />
+            </controls:TopMenu>
+        </Border>
+    </Design.PreviewWith>
+
+    <Style Selector="controls|TopMenuItem">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <TextBlock
+                    FontSize="20"
+                    Foreground="Black"
+                    Text="{TemplateBinding Text}" />
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
+    <Style Selector="controls|TopMenu">
+        <Setter Property="ItemsPanel">
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal" Spacing="10" />
+            </ItemsPanelTemplate>
+        </Setter>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Padding="10,0" VerticalAlignment="Center">
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Spacing="30">
+                        <TextBlock Text="LukeWire" VerticalAlignment="Center" />
+                        <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
+                    </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

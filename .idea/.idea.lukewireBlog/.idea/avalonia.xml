@@ -3,6 +3,10 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="lukewireBlog/lukewireBlog/Components/TopMenu.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/aaa.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/AView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/BView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/MainView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
       </map>

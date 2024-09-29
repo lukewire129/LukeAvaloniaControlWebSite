@@ -5,10 +5,14 @@
     x:Class="lukewireBlog.Views.MainView"
     x:DataType="vm:MainViewModel"
     xmlns="https://github.com/avaloniaui"
+    xmlns:components="clr-namespace:lukewireBlog.Components"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:lukewireBlog.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <StyleInclude Source="avares://lukewireBlog/Components/TopMenu.axaml" />
+    </UserControl.Styles>
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,
@@ -17,12 +21,12 @@
         <vm:MainViewModel />
     </Design.DataContext>
     <Grid RowDefinitions="51, *">
-        <Border Background="White" Padding="10,0">
-            <TextBlock Text="Lukewire" VerticalAlignment="Center" />
-        </Border>
+        <components:TopMenu />
         <Border
             Background="#f0f1f3"
             Grid.Row="1"
-            Padding="10,0" />
+            Padding="10,0">
+            <TransitioningContentControl Content="{Binding CurrentPage}" />
+        </Border>
     </Grid>
 </UserControl>
