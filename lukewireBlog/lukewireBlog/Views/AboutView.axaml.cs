@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace lukewireBlog.Views;
 
-public partial class AView : UserControl
+public partial class AboutView : UserControl
 {
-    public AView()
+    public AboutView()
     {
         InitializeComponent();
     }

@@ -1,0 +1,114 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:lukewireBlog.Components"
+    xmlns:i="https://github.com/projektanker/icons.avalonia"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <controls:Follow />
+    </Design.PreviewWith>
+    <Style Selector="Label.Twitter">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <i:Icon
+                        FontSize="20"
+                        Foreground="{TemplateBinding Foreground}"
+                        Value="mdi-twitter" />
+                    <HyperlinkButton Content="{TemplateBinding Content}" NavigateUri="{TemplateBinding Tag}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="Label.LinkedIn">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <i:Icon
+                        FontSize="20"
+                        Foreground="{TemplateBinding Foreground}"
+                        Value="mdi-linkedin" />
+                    <HyperlinkButton Content="{TemplateBinding Content}" NavigateUri="{TemplateBinding Tag}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="Label.FaceBook">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <i:Icon
+                        FontSize="20"
+                        Foreground="{TemplateBinding Foreground}"
+                        Value="mdi-facebook" />
+                    <HyperlinkButton Content="{TemplateBinding Content}" NavigateUri="{TemplateBinding Tag}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="Label.Intstagram">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <i:Icon
+                        FontSize="20"
+                        Foreground="{TemplateBinding Foreground}"
+                        Value="mdi-instagram" />
+                    <HyperlinkButton Content="{TemplateBinding Content}" NavigateUri="{TemplateBinding Tag}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="Label.Github">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <i:Icon
+                        FontSize="20"
+                        Foreground="{TemplateBinding Foreground}"
+                        Value="mdi-github" />
+                    <HyperlinkButton Content="{TemplateBinding Content}" NavigateUri="{TemplateBinding Tag}" />
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    <Style Selector="controls|Follow">
+        <Setter Property="Foreground" Value="#9e9e9e" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel
+                    Orientation="Vertical"
+                    Spacing="20"
+                    Width="{TemplateBinding Width}">
+                    <TextBlock Foreground="{TemplateBinding Foreground}" Text="FOLLOW" />
+                    <UniformGrid Columns="2">
+                        <Label
+                            Classes="Twitter"
+                            Content="@lukewire129"
+                            Foreground="{TemplateBinding Foreground}"
+                            Tag="https://x.com/Lukewire129" />
+                        <Label
+                            Classes="LinkedIn"
+                            Content="in/lukewire129"
+                            Foreground="{TemplateBinding Foreground}"
+                            Tag="https://www.linkedin.com/in/lukewire129" />
+                        <Label
+                            Classes="FaceBook"
+                            Content="lukewire129"
+                            Foreground="{TemplateBinding Foreground}"
+                            Tag="https://www.facebook.com/lukewire129/" />
+                        <Label
+                            Classes="Intstagram"
+                            Content="lukewire129"
+                            Foreground="{TemplateBinding Foreground}"
+                            Tag="https://www.instagram.com/lukewire129/" />
+                        <Label
+                            Classes="Github"
+                            Content="lukewire129"
+                            Foreground="{TemplateBinding Foreground}"
+                            Tag="https://github.com/lukewire129" />
+                    </UniformGrid>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

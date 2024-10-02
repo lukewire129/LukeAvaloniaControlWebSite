@@ -1,30 +1,38 @@
 <Styles
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="using:lukewireBlog.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:models="clr-namespace:lukewireBlog.Models"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
-        <Border Padding="10,0">
-            <controls:TopMenu>
-                <controls:TopMenuItem Text="Home" />
-                <controls:TopMenuItem Text="Home1" />
-                <controls:TopMenuItem Text="Home2" />
-                <controls:TopMenuItem Text="Home3" />
-            </controls:TopMenu>
+        <Border Width="1920">
+            <controls:TopMenu />
         </Border>
     </Design.PreviewWith>
 
     <Style Selector="controls|TopMenuItem">
+        <Setter Property="Command" Value="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:TopMenu}}}" />
         <Setter Property="Template">
             <ControlTemplate>
+                <!--  <TextBlock  -->
+                <!--  FontSize="15"  -->
+                <!--  Foreground="{StaticResource ColorBlack}"  -->
+                <!--  Text="hihihi"  -->
+                <!--  VerticalAlignment="Center" />  -->
                 <TextBlock
-                    FontSize="20"
-                    Foreground="Black"
-                    Text="{TemplateBinding Text}" />
+                    FontSize="15"
+                    Foreground="{StaticResource ColorWhite}"
+                    Text="{Binding Name}"
+                    VerticalAlignment="Center" />
             </ControlTemplate>
         </Setter>
+        <Style Selector="^ /template/ TextBlock:pointerover">
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
     </Style>
 
     <Style Selector="controls|TopMenu">
+        <Setter Property="MinWidth" Value="370" />
         <Setter Property="ItemsPanel">
             <ItemsPanelTemplate>
                 <StackPanel Orientation="Horizontal" Spacing="10" />
@@ -32,14 +40,27 @@
         </Setter>
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Padding="10,0" VerticalAlignment="Center">
-                    <StackPanel
-                        HorizontalAlignment="Center"
-                        Orientation="Horizontal"
-                        Spacing="30">
-                        <TextBlock Text="LukeWire" VerticalAlignment="Center" />
-                        <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
-                    </StackPanel>
+                <Border
+                    Background="#172d3c"
+                    Height="54"
+                    VerticalAlignment="Center">
+                    <Grid
+                        Background="Red"
+                        Margin="10,0"
+                        VerticalAlignment="Center">
+                        <Viewbox HorizontalAlignment="Left" Stretch="Uniform">
+                            <TextBlock
+                                FontSize="14"
+                                Foreground="{StaticResource ColorWhite}"
+                                Text="lukewire"
+                                VerticalAlignment="Center" />
+                        </Viewbox>
+                        <ItemsPresenter
+                            HorizontalAlignment="Right"
+                            IsVisible="{TemplateBinding IsMenuVisible}"
+                            ItemsPanel="{TemplateBinding ItemsPanel}"
+                            x:Name="PART_ITEMS" />
+                    </Grid>
                 </Border>
             </ControlTemplate>
         </Setter>

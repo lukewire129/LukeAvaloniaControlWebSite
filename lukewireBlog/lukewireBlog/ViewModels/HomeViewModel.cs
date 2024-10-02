@@ -1,6 +1,6 @@
 namespace lukewireBlog.ViewModels;
 
-public class AViewModel : ViewModelBase
+public class HomeViewModel : ViewModelBase
 {
     
 }

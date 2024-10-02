@@ -3,12 +3,21 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="lukewireBlog/lukewireBlog/App.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/BottomTab.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/BottopTab.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/Contact.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/Follow.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/TopMenu.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/aaa.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/AView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/AboutView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/BView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/BlogsView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/HomeView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/MainView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Views/ReviewView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
       </map>
     </option>
   </component>

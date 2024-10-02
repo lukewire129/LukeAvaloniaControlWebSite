@@ -10,8 +10,9 @@ public partial class MainViewModel : ViewModelBase
 {
     private ViewModelBase[] Pages =
     {
-        new AViewModel(),
-        new BViewModel(),
+        new HomeViewModel(),
+        new BlogsViewModel(),
+        new AboutViewModel(),
     };
     private ViewModelBase _CurrentPage;
     public ViewModelBase CurrentPage
@@ -20,20 +21,21 @@ public partial class MainViewModel : ViewModelBase
         private set { this.RaiseAndSetIfChanged(ref _CurrentPage, value); }
     }
 
-    public List<TapMenuModel> TopMenus = new()
+    public List<TapMenuModel> TopMenus { get; set; } = new()
     {
         new TapMenuModel(0, "Home"),
-        new TapMenuModel(1, "Archive"),
+        new TapMenuModel(1, "Blogs"),
+        new TapMenuModel(2, "About"),
     };
 
-    public ICommand NavigateNextCommand { get; }
+    public ICommand NavigateCommand { get; }
     public MainViewModel()
     { 
         _CurrentPage = Pages[0];
 
-        NavigateNextCommand = ReactiveCommand.Create<string>((idx)=>
+        NavigateCommand = ReactiveCommand.Create<TapMenuModel>((model)=>
         {
-            CurrentPage = Pages[Convert.ToInt32(idx)];
+            CurrentPage = Pages[model.Idx];
         });
-    }   
+    }
 }

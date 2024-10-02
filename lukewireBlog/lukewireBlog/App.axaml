@@ -1,14 +1,19 @@
-<Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:lukewireBlog"
-             x:Class="lukewireBlog.App"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+<Application
+    RequestedThemeVariant="Default"
+    x:Class="lukewireBlog.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:local="using:lukewireBlog"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
 
     <Application.DataTemplates>
-        <local:ViewLocator/>
+        <local:ViewLocator />
     </Application.DataTemplates>
 
+    <Application.Resources>
+        <SolidColorBrush x:Key="ColorBlack">#5a5560</SolidColorBrush>
+        <SolidColorBrush x:Key="ColorWhite">#FFFFFF</SolidColorBrush>
+    </Application.Resources>
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
