@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
-using lukewireBlog.Models;
+using lukewireBlog.Domain.Main.Models;
+using lukewireBlog.Services;
 using ReactiveUI;
 
 namespace lukewireBlog.ViewModels;
 
-public partial class MainViewModel : ViewModelBase
+public partial class MainViewModel : ReactiveObject
 {
     private ViewModelBase[] Pages =
     {
-        new HomeViewModel(),
-        new BlogsViewModel(),
-        new AboutViewModel(),
+        new HomeViewModel(new ContentService()),
+        new BlogViewModel(new ContentService()),
+        new AboutViewModel(new ContentService()),
     };
     private ViewModelBase _CurrentPage;
     public ViewModelBase CurrentPage

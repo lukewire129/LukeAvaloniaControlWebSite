@@ -5,9 +5,6 @@
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
-    <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia" Version="11.1.3" />
@@ -18,28 +15,93 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.3" />
         <PackageReference Include="Markdig" Version="0.37.0" />
-        <PackageReference Include="Markdown.Avalonia.Tight" Version="11.0.2" />
-        <PackageReference Include="Markdown.ColorCode" Version="2.3.0" />
+        <PackageReference Include="Markdig.SyntaxHighlighting" Version="1.1.7" />
         <PackageReference Include="Projektanker.Icons.Avalonia" Version="9.4.0" />
         <PackageReference Include="Projektanker.Icons.Avalonia.MaterialDesign" Version="9.4.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Components\TopMenuItem.cs">
+      <Compile Update="Services\AboutReadme.cs">
+        <DependentUpon>_Readme.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Services\BlogReadme.cs">
+        <DependentUpon>_Readme.cs</DependentUpon>
+      </Compile>
+      <Compile Update="domain\Home\Index.axaml.cs">
+        <DependentUpon>HomeView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="domain\Blog\Index.axaml.cs">
+        <DependentUpon>BlogView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="domain\About\Index.axaml.cs">
+        <DependentUpon>AboutView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="domain\Main\Index.axaml.cs">
+        <DependentUpon>MainView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Domain\Main\Components\BottomTab.axaml.cs">
+        <DependentUpon>BottomTab.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Domain\Main\Components\Contact.axaml.cs">
+        <DependentUpon>Contact.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Domain\Main\Components\Follow.axaml.cs">
+        <DependentUpon>Follow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Domain\Main\Components\TopMenu.cs">
         <DependentUpon>TopMenu.axaml</DependentUpon>
       </Compile>
-      <Compile Update="Components\TopMenu.cs">
+      <Compile Update="Domain\Main\Components\TopMenuItem.cs">
         <DependentUpon>TopMenu.axaml</DependentUpon>
+      </Compile>
+      <Compile Update="MainWindow.axaml.cs">
+        <DependentUpon>MainWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <AvaloniaXaml Update="Components\Contact.axaml">
+      <AdditionalFiles Include="Domain\Main\Components\Contact.axaml" />
+      <AdditionalFiles Include="Domain\Main\Components\Follow.axaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaXaml Update="Domain\Main\Components\Contact.axaml">
         <DependentUpon>BottomTab.axaml</DependentUpon>
       </AvaloniaXaml>
-      <AvaloniaXaml Update="Components\Follow.axaml">
+      <AvaloniaXaml Update="Domain\Main\Components\Follow.axaml">
         <DependentUpon>BottomTab.axaml</DependentUpon>
       </AvaloniaXaml>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Fonts\NotoSansKR-Black.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Black.ttf" />
+      <None Remove="Assets\avalonia-logo.ico" />
+      <AvaloniaResource Include="Assets\avalonia-logo.ico" />
+      <None Remove="Assets\Fonts\NotoSansKR-Bold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Bold.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-ExtraBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraBold.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-ExtraLight.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraLight.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-Light.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Light.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-Medium.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Medium.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-Regular.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Regular.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-SemiBold.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-SemiBold.ttf" />
+      <None Remove="Assets\Fonts\NotoSansKR-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Thin.ttf" />
     </ItemGroup>
 
 </Project>

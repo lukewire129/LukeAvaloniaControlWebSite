@@ -1,0 +1,24 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:avalonia="clr-namespace:TheArtOfDev.HtmlRenderer.Avalonia;assembly=Avalonia.HtmlRenderer"
+    xmlns:controls="using:lukewireBlog.Components"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <controls:MarkdownViewer />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|MarkdownViewer">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    Background="#ffffff"
+                    BorderBrush="#cccccc"
+                    BorderThickness="1"
+                    Padding="30">
+                    <avalonia:HtmlPanel Text="{TemplateBinding Text}" x:Name="_htmlPanel" />
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

@@ -1,10 +1,9 @@
 using System;
-using System.Diagnostics;
-using System.IO;
-using Avalonia.Platform;
-using Avalonia.Utilities;
+using System.Threading.Tasks;
+using lukewireBlog.Services;
+using lukewireBlog.ViewModels;
 using Markdig;
-using Markdown.ColorCode;
+using Markdig.SyntaxHighlighting;
 using ReactiveUI;
 
 namespace lukewireBlog.ViewModels;
@@ -17,34 +16,22 @@ public class AboutViewModel : ViewModelBase
         get { return _MdHTMl; }
         private set { this.RaiseAndSetIfChanged(ref _MdHTMl, value); }
     }
-
-    private string _pathString;
-    public string PathString
+    
+    public AboutViewModel(IContentService contentService) : base(contentService)
     {
-        get { return _pathString; }
-        private set { this.RaiseAndSetIfChanged(ref _pathString, value); }
-    }
-    public AboutViewModel()
-    {
-        string basePath = AppContext.BaseDirectory;
+        Task.Run(async () =>
+        {
+            string content = await _contentService.ReadmeLoad(new AboutReadme());
 
-        // string fullPath = Path.Combine(basePath, "_posts/about/about.md");
-        string fullPath = Path.Combine(basePath, "_posts/about/about.md");
-        PathString = fullPath;
-        Debug.WriteLine(fullPath);
-        if (File.Exists(fullPath))
-        {
-            var markdown = File.ReadAllText(fullPath);
-            var pipeline = new MarkdownPipelineBuilder()
-                .UseAdvancedExtensions()
-                .UseColorCode()
-                .Build();
-            
-            MdHTMl = Markdig.Markdown.ToHtml(markdown, pipeline);
-        }
-        else
-        {
-            var PathString = "File not found";
-        }
+            if (String.IsNullOrEmpty(content) == false)
+            {
+                var pipeline = new MarkdownPipelineBuilder()
+                    .UseAdvancedExtensions()
+                    .UseSyntaxHighlighting()
+                    .Build();
+                var cssLink = "<style>pre { background-color: #f6f8fa; }</style>\n\r";
+                MdHTMl = Markdown.ToHtml(cssLink +content, pipeline);
+            }
+        });
     }
 }

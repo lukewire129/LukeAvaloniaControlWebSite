@@ -1,0 +1,33 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:lukewireBlog.Components"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <controls:BlogPanelItem />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|BlogPanelItem">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border
+                    BorderBrush="#e5e5e5"
+                    BorderThickness="0,0,0,1"
+                    Padding="0,20">
+
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel.Styles>
+                            <Style Selector="TextBlock">
+                                <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+                                <Setter Property="Foreground" Value="{StaticResource ColorBlack}" />
+                            </Style>
+                        </StackPanel.Styles>
+                        <TextBlock Text="{Binding Title}" />
+                        <TextBlock Text="{Binding SubTitle}" />
+                        <TextBlock Text="{Binding Date}" />
+                    </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

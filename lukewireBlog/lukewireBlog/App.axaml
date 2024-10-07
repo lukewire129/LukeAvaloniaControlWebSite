@@ -11,6 +11,7 @@
     </Application.DataTemplates>
 
     <Application.Resources>
+        <FontFamily x:Key="NotoSansKR">avares://lukewireBlog/Assets/Fonts#Noto Sans KR</FontFamily>
         <SolidColorBrush x:Key="ColorBlack">#5a5560</SolidColorBrush>
         <SolidColorBrush x:Key="ColorWhite">#FFFFFF</SolidColorBrush>
     </Application.Resources>

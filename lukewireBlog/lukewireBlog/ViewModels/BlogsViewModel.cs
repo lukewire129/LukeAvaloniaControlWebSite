@@ -1,6 +1,11 @@
+using lukewireBlog.Services;
+using lukewireBlog.ViewModels;
+
 namespace lukewireBlog.ViewModels;
 
-public class BlogsViewModel : ViewModelBase
+public class BlogViewModel : ViewModelBase
 {
-    
+    public BlogViewModel(IContentService contentService) : base(contentService)
+    {
+    }
 }

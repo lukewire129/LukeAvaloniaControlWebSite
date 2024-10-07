@@ -12,15 +12,17 @@ public class ViewLocator : IDataTemplate
         if (data is null)
             return null;
 
-        var name = data.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        var type = Type.GetType(name);
-
+        var pathName = data.GetType().Namespace!.Replace("ViewModels", "Domain");
+        var folderName = data.GetType().Name!.Replace("ViewModel", "");
+        // var name = data.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
+        var type = Type.GetType($"{pathName}.{folderName}.Index");
+        
         if (type != null)
         {
             return (Control)Activator.CreateInstance(type)!;
         }
 
-        return new TextBlock { Text = "Not Found: " + name };
+        return new TextBlock { Text = "Not Found: " + $"{pathName}.{folderName}.index" };
     }
 
     public bool Match(object? data)
