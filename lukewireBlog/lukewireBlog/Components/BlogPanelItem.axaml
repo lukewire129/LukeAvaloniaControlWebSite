@@ -14,16 +14,22 @@
                     BorderBrush="#e5e5e5"
                     BorderThickness="0,0,0,1"
                     Padding="0,20">
-
                     <StackPanel Orientation="Vertical">
                         <StackPanel.Styles>
                             <Style Selector="TextBlock">
-                                <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+                                <Setter Property="FontFamily" Value="{DynamicResource NotoSansKR}" />
                                 <Setter Property="Foreground" Value="{StaticResource ColorBlack}" />
+                                <Setter Property="TextWrapping" Value="Wrap" />
                             </Style>
                         </StackPanel.Styles>
-                        <TextBlock Text="{Binding Title}" />
-                        <TextBlock Text="{Binding SubTitle}" />
+                        <TextBlock
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Text="{Binding Title}" />
+                        <TextBlock
+                            FontSize="15"
+                            FontWeight="SemiBold"
+                            Text="{Binding SubTitle}" />
                         <TextBlock Text="{Binding Date}" />
                     </StackPanel>
                 </Border>

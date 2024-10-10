@@ -7,17 +7,17 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.1.3" />
+        <PackageReference Include="Avalonia" Version="11.1.4" />
         <PackageReference Include="Avalonia.HtmlRenderer" Version="11.0.0" />
-        <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.3" />
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.3" />
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.3" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.4" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.4" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.4" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.3" />
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.4" />
         <PackageReference Include="Markdig" Version="0.37.0" />
         <PackageReference Include="Markdig.SyntaxHighlighting" Version="1.1.7" />
-        <PackageReference Include="Projektanker.Icons.Avalonia" Version="9.4.0" />
-        <PackageReference Include="Projektanker.Icons.Avalonia.MaterialDesign" Version="9.4.0" />
+        <PackageReference Include="Projektanker.Icons.Avalonia" Version="9.4.1" />
+        <PackageReference Include="Projektanker.Icons.Avalonia.MaterialDesign" Version="9.4.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -82,26 +82,34 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Assets\Fonts\NotoSansKR-Black.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Black.ttf" />
-      <None Remove="Assets\avalonia-logo.ico" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Black.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
       <AvaloniaResource Include="Assets\avalonia-logo.ico" />
-      <None Remove="Assets\Fonts\NotoSansKR-Bold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Bold.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-ExtraBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraBold.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-ExtraLight.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraLight.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-Light.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Light.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-Medium.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Medium.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-Regular.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Regular.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-SemiBold.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-SemiBold.ttf" />
-      <None Remove="Assets\Fonts\NotoSansKR-Thin.ttf" />
-      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Thin.ttf" />
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Bold.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraBold.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-ExtraLight.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Light.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Medium.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Regular.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-SemiBold.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Thin.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
     </ItemGroup>
 
 </Project>

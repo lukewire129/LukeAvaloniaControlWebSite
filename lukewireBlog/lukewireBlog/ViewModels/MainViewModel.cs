@@ -8,12 +8,7 @@ namespace lukewireBlog.ViewModels;
 
 public partial class MainViewModel : ReactiveObject
 {
-    private ViewModelBase[] Pages =
-    {
-        new HomeViewModel(new ContentService()),
-        new BlogViewModel(new ContentService()),
-        new AboutViewModel(new ContentService()),
-    };
+    private ViewModelBase[] Pages;
     private ViewModelBase _CurrentPage;
     public ViewModelBase CurrentPage
     {
@@ -29,13 +24,22 @@ public partial class MainViewModel : ReactiveObject
     };
 
     public ICommand NavigateCommand { get; }
-    public MainViewModel()
-    { 
-        _CurrentPage = Pages[0];
 
+    public MainViewModel()
+    {
+        var service = new ContentService();
+        Pages = new ViewModelBase[]
+        {
+            new HomeViewModel(service),
+            new BlogViewModel(service),
+            new AboutViewModel(service),
+        };
+        _CurrentPage = Pages[0];
+        _CurrentPage.Load();
         NavigateCommand = ReactiveCommand.Create<TapMenuModel>((model)=>
         {
             CurrentPage = Pages[model.Idx];
+            Pages[model.Idx].Load();
         });
     }
 }

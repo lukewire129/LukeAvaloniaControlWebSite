@@ -14,7 +14,7 @@ public class AboutViewModel : ViewModelBase
     public string MdHTMl
     {
         get { return _MdHTMl; }
-        private set { this.RaiseAndSetIfChanged(ref _MdHTMl, value); }
+        set { this.RaiseAndSetIfChanged(ref _MdHTMl, value); }
     }
     
     public AboutViewModel(IContentService contentService) : base(contentService)

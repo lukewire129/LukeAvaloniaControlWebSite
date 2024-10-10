@@ -9,7 +9,7 @@ namespace lukewireBlog.Services;
 
 public interface IContentService
 {
-    Task GetAllPosts();
+    Task<List<BlogPost>> GetAllPosts();
     Task<string> ReadmeLoad(_Readme readme);
 
     List<BlogPost> GetAllBlog();
@@ -20,7 +20,7 @@ public class ContentService : IContentService
 {
     private List<BlogPost> Blogs { get; set; }
 
-    public async Task GetAllPosts()
+    public async Task<List<BlogPost>> GetAllPosts()
     {
         var client = new HttpClient();
         var response = await client.GetAsync($"https://lukewire129.github.io/recentblogs.json");
@@ -30,6 +30,8 @@ public class ContentService : IContentService
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         
         Blogs = aa.Files.OrderByDescending(x => x.Metadata.Date).ToList();
+
+        return Blogs;
     }
 
     public async Task<string> ReadmeLoad(_Readme readme)

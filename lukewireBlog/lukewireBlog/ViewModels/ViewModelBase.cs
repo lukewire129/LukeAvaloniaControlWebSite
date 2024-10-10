@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Reactive.Linq;
+using System.Threading.Tasks;
 using lukewireBlog.Services;
 using ReactiveUI;
 
@@ -11,12 +12,8 @@ public abstract class ViewModelBase : ReactiveObject
     {
         _contentService = contentService;
     }
-    public virtual void Load()
+    public virtual async Task Load()
     {
-        Task.Run(async () =>
-        {
-            await _contentService.GetAllPosts();
-
-        });
+        await _contentService.GetAllPosts();
     }
 }
