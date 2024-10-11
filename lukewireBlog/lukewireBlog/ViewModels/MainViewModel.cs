@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Reactive.Concurrency;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using lukewireBlog.Domain.Main.Models;
 using lukewireBlog.Services;
@@ -34,12 +36,17 @@ public partial class MainViewModel : ReactiveObject
             new BlogViewModel(service),
             new AboutViewModel(service),
         };
-        _CurrentPage = Pages[0];
-        _CurrentPage.Load();
-        NavigateCommand = ReactiveCommand.Create<TapMenuModel>((model)=>
+        Pages[0].Load();
+        CurrentPage = Pages[0];
+        
+        NavigateCommand = ReactiveCommand.Create<TapMenuModel>(async (model)=>
         {
-            CurrentPage = Pages[model.Idx];
-            Pages[model.Idx].Load();
-        });
+            var page = Pages[model.Idx];
+            RxApp.MainThreadScheduler.Schedule(()=>
+            {
+                page.Load();
+                CurrentPage = page;
+            });
+        }, outputScheduler: RxApp.TaskpoolScheduler);
     }
 }

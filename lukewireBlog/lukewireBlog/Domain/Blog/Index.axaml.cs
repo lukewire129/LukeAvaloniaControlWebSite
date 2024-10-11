@@ -8,9 +8,9 @@ public partial class Index : UserControl
     public Index()
     {
         InitializeComponent();
-        this.Loaded += (s, e) =>
-        {
-            ((ViewModelBase)this.DataContext).Load();
-        };
+        // this.Loaded += (s, e) =>
+        // {
+        //     ((ViewModelBase)this.DataContext).Load();
+        // };
     }
 }

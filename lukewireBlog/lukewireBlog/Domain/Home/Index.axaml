@@ -12,5 +12,8 @@
     <UserControl.Styles>
         <StyleInclude Source="avares://lukewireBlog/Components/BlogPanel.axaml" />
     </UserControl.Styles>
-    <components:BlogPanel ItemsSource="{Binding Items}" />
+    <StackPanel>
+        <components:BlogPanel ItemsSource="{Binding Items}" />
+        <TextBlock FontFamily="{StaticResource NotoSansKR}" Text="Hihihi안녕" />
+    </StackPanel>
 </UserControl>

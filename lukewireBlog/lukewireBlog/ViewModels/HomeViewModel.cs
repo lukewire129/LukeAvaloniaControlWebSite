@@ -1,33 +1,29 @@
-using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
-using Avalonia.Threading;
 using lukewireBlog.Models;
 using lukewireBlog.Services;
+using lukewireBlog.Services.Models;
 using ReactiveUI;
 
 namespace lukewireBlog.ViewModels;
 
 public class HomeViewModel : ViewModelBase
 { 
-    private ObservableCollection<PanelItemModel> items;
-    public ObservableCollection<PanelItemModel> Items
+    private List<PanelItemModel> items;
+    public List<PanelItemModel> Items
     {
         get { return items; }
         set { this.RaiseAndSetIfChanged(ref items, value); }
     }
     public HomeViewModel(IContentService contentService) : base(contentService)
     {
-        Items = new();
-    }
-    
-    public override async Task Load()
-    {
-        var data = await _contentService.GetAllPosts();
-        await Dispatcher.UIThread.InvokeAsync(() =>
+        Task.Run(async () =>
         {
-            Items.Clear(); // 기존 데이터 클리어
+            Items = new();
+            var data = await _contentService.GetAllPosts();
             foreach (var post in data)
             {
                 if (post.Metadata.Date == null)
@@ -35,23 +31,9 @@ public class HomeViewModel : ViewModelBase
                 Items.Add(new PanelItemModel(post.Metadata));
             }
         });
-        // Observable.Start(async () =>
-        //     {
-        //         return  await _contentService.GetAllPosts();
-        //     })
-        //     .Subscribe(result =>
-        //     {
-        //         var recent = result.Result;
-        //         foreach (var post in  recent)
-        //         {
-        //             if(post.Metadata.Date == null)
-        //                 continue;
-        //             Items.Add(new PanelItemModel(post.Metadata));
-        //         }
-        //     },  error =>
-        //     {
-        //         // 작업 실패 시 에러 처리
-        //         Console.WriteLine($"에러 발생: {error.Message}");
-        //     });
+    }
+    
+    public override async void Load()
+    {
     }
 }

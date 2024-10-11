@@ -24,7 +24,6 @@ public class ContentService : IContentService
     {
         var client = new HttpClient();
         var response = await client.GetAsync($"https://lukewire129.github.io/recentblogs.json");
-        response.EnsureSuccessStatusCode(); // Throws if the response status is not 200-299
         var jsonResponse = await response.Content.ReadAsStringAsync();
         var aa = JsonSerializer.Deserialize<BlogPostCollection>(jsonResponse,
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
