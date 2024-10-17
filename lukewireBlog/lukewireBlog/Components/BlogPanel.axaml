@@ -8,6 +8,13 @@
     </Design.PreviewWith>
 
     <Style Selector="controls|BlogPanel">
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" Spacing="10" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
         <!--  Set Defaults  -->
         <Setter Property="Template">
             <ControlTemplate>
@@ -16,7 +23,7 @@
                     BorderBrush="#cccccc"
                     BorderThickness="1"
                     Padding="30">
-                    <ItemsPresenter />
+                    <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" />
                 </Border>
             </ControlTemplate>
         </Setter>

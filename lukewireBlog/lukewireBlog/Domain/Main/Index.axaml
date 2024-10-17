@@ -28,7 +28,7 @@
         <StackPanel>
             <components:TopMenu ItemsSource="{Binding TopMenus}" />
             <Border Padding="0,20">
-                <TransitioningContentControl Content="{Binding CurrentPage}" Width="800" />
+                <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>
             <components:BottomTab Height="150" />
         </StackPanel>

@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using lukewireBlog.Services.Models;
+using Newtonsoft.Json;
 
 namespace lukewireBlog.Services;
 
@@ -25,8 +26,7 @@ public class ContentService : IContentService
         var client = new HttpClient();
         var response = await client.GetAsync($"https://lukewire129.github.io/recentblogs.json");
         var jsonResponse = await response.Content.ReadAsStringAsync();
-        var aa = JsonSerializer.Deserialize<BlogPostCollection>(jsonResponse,
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        var aa =  JsonConvert.DeserializeObject<BlogPostCollection>(jsonResponse);
         
         Blogs = aa.Files.OrderByDescending(x => x.Metadata.Date).ToList();
 

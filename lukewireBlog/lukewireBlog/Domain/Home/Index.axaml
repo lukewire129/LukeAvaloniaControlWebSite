@@ -1,5 +1,6 @@
 <UserControl
     MinHeight="500"
+    Width="800"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d"
@@ -12,8 +13,5 @@
     <UserControl.Styles>
         <StyleInclude Source="avares://lukewireBlog/Components/BlogPanel.axaml" />
     </UserControl.Styles>
-    <StackPanel>
-        <components:BlogPanel ItemsSource="{Binding Items}" />
-        <TextBlock FontFamily="{StaticResource NotoSansKR}" Text="Hihihi안녕" />
-    </StackPanel>
+    <components:BlogPanel ItemsSource="{Binding Items}" />
 </UserControl>

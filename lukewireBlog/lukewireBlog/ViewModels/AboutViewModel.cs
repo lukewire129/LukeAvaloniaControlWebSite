@@ -30,7 +30,7 @@ public class AboutViewModel : ViewModelBase
                     .UseSyntaxHighlighting()
                     .Build();
                 var cssLink = "<style>pre { background-color: #f6f8fa; }</style>\n\r";
-                MdHTMl = Markdown.ToHtml(cssLink +content, pipeline);
+                MdHTMl = content;
             }
         });
     }

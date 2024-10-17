@@ -7,10 +7,13 @@
     </Design.PreviewWith>
 
     <Style Selector="controls|BlogPanelItem">
+        <Setter Property="Command" Value="{Binding Path=DataContext.ReamdBlogCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:BlogPanel}}}" />
+        <Setter Property="Cursor" Value="Hand" />
         <!--  Set Defaults  -->
         <Setter Property="Template">
             <ControlTemplate>
                 <Border
+                    Background="Transparent"
                     BorderBrush="#e5e5e5"
                     BorderThickness="0,0,0,1"
                     Padding="0,20">
@@ -25,7 +28,8 @@
                         <TextBlock
                             FontSize="20"
                             FontWeight="Bold"
-                            Text="{Binding Title}" />
+                            Text="{Binding Title}"
+                            x:Name="PART_TITLE" />
                         <TextBlock
                             FontSize="15"
                             FontWeight="SemiBold"
@@ -35,5 +39,10 @@
                 </Border>
             </ControlTemplate>
         </Setter>
+        <Style Selector="^:pointerover">
+            <Style Selector="^ /template/ TextBlock#PART_TITLE">
+                <Setter Property="Foreground" Value="Aquamarine" />
+            </Style>
+        </Style>
     </Style>
 </Styles>

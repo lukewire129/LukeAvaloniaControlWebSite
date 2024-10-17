@@ -1,11 +1,16 @@
 <Styles
     xmlns="https://github.com/avaloniaui"
-    xmlns:avalonia="clr-namespace:TheArtOfDev.HtmlRenderer.Avalonia;assembly=Avalonia.HtmlRenderer"
     xmlns:controls="using:lukewireBlog.Components"
+    xmlns:mdHtml="clr-namespace:Markdown.Avalonia.Html;assembly=Markdown.Avalonia.Html"
+    xmlns:mdxaml="https://github.com/whistyun/Markdown.Avalonia.Tight"
+    xmlns:viewModels="clr-namespace:lukewireBlog.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <controls:MarkdownViewer />
     </Design.PreviewWith>
+    <Styles.Resources>
+        <viewModels:MyLinkCommand x:Key="myLinkCommand" />
+    </Styles.Resources>
 
     <Style Selector="controls|MarkdownViewer">
         <!--  Set Defaults  -->
@@ -16,7 +21,23 @@
                     BorderBrush="#cccccc"
                     BorderThickness="1"
                     Padding="30">
-                    <avalonia:HtmlPanel Text="{TemplateBinding Text}" x:Name="_htmlPanel" />
+                    <mdxaml:MarkdownScrollViewer
+                        Margin="5"
+                        Markdown="{TemplateBinding Text}"
+                        MaxWidth="1000"
+                        Name="MarkdownScrollViewer">
+                        <mdxaml:MarkdownScrollViewer.Styles>
+                            <StyleInclude Source="avares://lukewireBlog/Styles.axaml" />
+                        </mdxaml:MarkdownScrollViewer.Styles>
+                        <mdxaml:MarkdownScrollViewer.Engine>
+                            <mdxaml:Markdown HyperlinkCommand="{StaticResource myLinkCommand}" />
+                        </mdxaml:MarkdownScrollViewer.Engine>
+                        <mdxaml:MarkdownScrollViewer.Plugins>
+                            <mdxaml:MdAvPlugins>
+                                <mdHtml:HtmlPlugin />
+                            </mdxaml:MdAvPlugins>
+                        </mdxaml:MarkdownScrollViewer.Plugins>
+                    </mdxaml:MarkdownScrollViewer>
                 </Border>
             </ControlTemplate>
         </Setter>

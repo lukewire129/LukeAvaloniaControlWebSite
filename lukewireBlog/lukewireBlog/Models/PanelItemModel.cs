@@ -9,11 +9,13 @@ public class PanelItemModel
     public string SubTitle { get; set; }
     public string Date { get; set; }
 
-    public PanelItemModel(Metadata metadata)
+    public BlogPost _post { get; set; }
+    public PanelItemModel(BlogPost? post)
     {
-        this.Title = metadata.Title;
-        this.SubTitle = metadata.Subtitle;
-        TimeSpan dateDiff = metadata.Date.Value - DateTime.Now;
+        this._post = post;
+        this.Title = post.Metadata.Title;
+        this.SubTitle = post.Metadata.Subtitle;
+        TimeSpan dateDiff = post.Metadata.Date.Value - DateTime.Now;
 
         var tempDiffTotalDay = Math.Abs(dateDiff.TotalDays);
         if (tempDiffTotalDay == 0)
