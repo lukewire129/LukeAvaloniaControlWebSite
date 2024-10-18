@@ -4,21 +4,21 @@ using Avalonia.Controls;
 
 namespace lukewireBlog.Domain.Home.Components;
 
-public class TopMenu : ListBox
+public class SideMenu : ListBox
 {
     protected override Control CreateContainerForItemOverride(object? item, int index, object? recycleKey)
     {
-        return new TopMenuItem();
+        return new SideMenuItem();
     }
     public static readonly AvaloniaProperty IsMenuVisibleProperty =
-        AvaloniaProperty.Register<TopMenu, bool>(nameof(IsMenuVisible));
+        AvaloniaProperty.Register<SideMenu, bool>(nameof(IsMenuVisible));
 
     public bool IsMenuVisible
     {
         get => (bool)GetValue(IsMenuVisibleProperty);
         set => SetValue(IsMenuVisibleProperty, value);
     }
-    public TopMenu()
+    public SideMenu()
     {
         this.SizeChanged += (s, e) =>
         {

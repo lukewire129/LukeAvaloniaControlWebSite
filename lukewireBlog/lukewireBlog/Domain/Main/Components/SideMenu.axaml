@@ -2,23 +2,17 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:controls="using:lukewireBlog.Domain.Home.Components"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:models="clr-namespace:lukewireBlog.Models"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Design.PreviewWith>
         <Border Width="1920">
-            <controls:TopMenu />
+            <controls:SideMenu />
         </Border>
     </Design.PreviewWith>
 
-    <Style Selector="controls|TopMenuItem">
-        <Setter Property="Command" Value="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:TopMenu}}}" />
+    <Style Selector="controls|SideMenuItem">
+        <Setter Property="Command" Value="{Binding DataContext.NavigateCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:SideMenu}}}" />
         <Setter Property="Template">
             <ControlTemplate>
-                <!--  <TextBlock  -->
-                <!--  FontSize="15"  -->
-                <!--  Foreground="{StaticResource ColorBlack}"  -->
-                <!--  Text="hihihi"  -->
-                <!--  VerticalAlignment="Center" />  -->
                 <TextBlock
                     FontSize="15"
                     Foreground="{StaticResource ColorWhite}"
@@ -31,7 +25,7 @@
         </Style>
     </Style>
 
-    <Style Selector="controls|TopMenu">
+    <Style Selector="controls|SideMenu">
         <Setter Property="MinWidth" Value="370" />
         <Setter Property="ItemsPanel">
             <ItemsPanelTemplate>

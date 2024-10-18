@@ -13,7 +13,7 @@
     xmlns:vm="clr-namespace:lukewireBlog.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
-        <StyleInclude Source="./Components/TopMenu.axaml" />
+        <StyleInclude Source="./Components/SideMenu.axaml" />
         <StyleInclude Source="./Components/BottomTab.axaml" />
         <Style Selector="ScrollViewer" />
     </UserControl.Styles>
@@ -26,7 +26,7 @@
     </Design.DataContext>
     <ScrollViewer Height="{Binding Height, ElementName=main}">
         <StackPanel>
-            <components:TopMenu ItemsSource="{Binding TopMenus}" />
+            <components:SideMenu ItemsSource="{Binding SideMenus}" />
             <Border Padding="0,20">
                 <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reactive.Concurrency;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using CommunityToolkit.Mvvm.Messaging;
 using lukewireBlog.Domain.Main.Models;
-using lukewireBlog.Models;
-using lukewireBlog.Services;
-using lukewireBlog.ViewModels.MessengerModel;
 using ReactiveUI;
 
 namespace lukewireBlog.ViewModels;
@@ -23,10 +17,9 @@ public partial class MainViewModel : ReactiveObject
         set { this.RaiseAndSetIfChanged(ref _CurrentPage, value); }
     }
 
-    public List<TapMenuModel> TopMenus { get; set; } = new()
+    public List<TapMenuModel> SideMenus { get; set; } = new()
     {
-        new TapMenuModel(0, "Home"),
-        new TapMenuModel(1, "About"),
+        new TapMenuModel(0, "NavigationBar"),
     };
 
     public ICommand NavigateCommand { get; }
@@ -47,7 +40,6 @@ public partial class MainViewModel : ReactiveObject
             var page = Pages[model.Idx];
             RxApp.MainThreadScheduler.Schedule(() =>
             {
-                page.Load();
                 CurrentPage = page;
             });
         }, outputScheduler: RxApp.TaskpoolScheduler);

@@ -5,10 +5,10 @@ using Avalonia.Controls.Primitives;
 
 namespace lukewireBlog.Domain.Home.Components;
 
-public class TopMenuItem : TemplatedControl
+public class SideMenuItem : TemplatedControl
 {
     public static readonly AvaloniaProperty TextProperty =
-        AvaloniaProperty.Register<TopMenuItem, string>(nameof(Text));
+        AvaloniaProperty.Register<SideMenuItem, string>(nameof(Text));
 
     public string Text 
     {
@@ -17,7 +17,7 @@ public class TopMenuItem : TemplatedControl
     }
     
     public static readonly AvaloniaProperty CommandProperty =
-        AvaloniaProperty.Register<TopMenuItem, ICommand?>(nameof(Command));
+        AvaloniaProperty.Register<SideMenuItem, ICommand?>(nameof(Command));
 
     public ICommand? Command 
     {
@@ -25,7 +25,7 @@ public class TopMenuItem : TemplatedControl
         set => SetValue(CommandProperty, value);
     }
 
-    public TopMenuItem()
+    public SideMenuItem()
     {
         this.Tapped += (s, e) =>
         {

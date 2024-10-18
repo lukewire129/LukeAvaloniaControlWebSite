@@ -53,11 +53,11 @@
         <DependentUpon>Follow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Domain\Main\Components\TopMenu.cs">
-        <DependentUpon>TopMenu.axaml</DependentUpon>
+      <Compile Update="Domain\Main\Components\SideMenu.cs">
+        <DependentUpon>SideMenu.axaml</DependentUpon>
       </Compile>
-      <Compile Update="Domain\Main\Components\TopMenuItem.cs">
-        <DependentUpon>TopMenu.axaml</DependentUpon>
+      <Compile Update="Domain\Main\Components\SideMenuItem.cs">
+        <DependentUpon>SideMenu.axaml</DependentUpon>
       </Compile>
       <Compile Update="MainWindow.axaml.cs">
         <DependentUpon>MainWindow.axaml</DependentUpon>
@@ -115,7 +115,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Avalonia.HtmlRenderer\Avalonia.HtmlRenderer\Avalonia.HtmlRenderer.csproj" />
+      <ProjectReference Include="..\..\libs\repo\src\AvaloniaNavigationBar.csproj" />
     </ItemGroup>
 
     <ItemGroup>
