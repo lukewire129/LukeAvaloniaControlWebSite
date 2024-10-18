@@ -115,10 +115,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\libs\repo\src\AvaloniaNavigationBar.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <UpToDateCheckInput Remove="Domain\About\Index.axaml" />
     </ItemGroup>
 
