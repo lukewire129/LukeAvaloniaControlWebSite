@@ -1,0 +1,3 @@
+[submodule "lukewireBlog/libs/repo/navigationbar"]
+	path = lukewireBlog/libs/repo/navigationbar
+	url = https://github.com/lukewire129/navigationbar-avaloniaui.git
