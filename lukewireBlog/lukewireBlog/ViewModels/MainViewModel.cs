@@ -33,12 +33,11 @@ public partial class MainViewModel : ReactiveObject
 
     public MainViewModel()
     {
-        var service = new ContentService();
-        Pages = new ViewModelBase[]
-        {
-            new HomeViewModel(service),
-            new AboutViewModel(service),
-        };
+        // Pages = new ViewModelBase[]
+        // {
+        //     new HomeViewModel(service),
+        //     new AboutViewModel(service),
+        // };
 
         Pages[0].Load();
         CurrentPage = Pages[0];
@@ -52,8 +51,5 @@ public partial class MainViewModel : ReactiveObject
                 CurrentPage = page;
             });
         }, outputScheduler: RxApp.TaskpoolScheduler);
-
-        WeakReferenceMessenger.Default.Register<ReadmBlogChange>(this,
-            (r, m) => { this.CurrentPage = (ViewModelBase)new BlogViewModel(service, (PanelItemModel)m.Value); });
     }
 }

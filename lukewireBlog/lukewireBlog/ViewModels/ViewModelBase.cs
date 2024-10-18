@@ -9,13 +9,10 @@ namespace lukewireBlog.ViewModels;
 
 public abstract class ViewModelBase : ReactiveObject
 {
-    protected readonly IContentService _contentService;
-    public ViewModelBase(IContentService contentService)
+    public ViewModelBase()
     {
-        _contentService = contentService;
     }
     public virtual  async void Load()
     {
-        var aa = await _contentService.GetAllPosts();
     }
 }
