@@ -29,23 +29,13 @@
         <Setter Property="MinWidth" Value="370" />
         <Setter Property="ItemsPanel">
             <ItemsPanelTemplate>
-                <StackPanel Orientation="Horizontal" Spacing="10" />
+                <StackPanel Orientation="Vertical" Spacing="10" />
             </ItemsPanelTemplate>
         </Setter>
         <Setter Property="Template">
             <ControlTemplate>
-                <Border
-                    Background="#172d3c"
-                    Height="54"
-                    VerticalAlignment="Center">
+                <Border Background="#2e2e2e" VerticalAlignment="Top">
                     <Grid Margin="10,0" VerticalAlignment="Center">
-                        <Viewbox HorizontalAlignment="Left" Stretch="Uniform">
-                            <TextBlock
-                                FontSize="14"
-                                Foreground="{StaticResource ColorWhite}"
-                                Text="lukewire"
-                                VerticalAlignment="Center" />
-                        </Viewbox>
                         <ItemsPresenter
                             HorizontalAlignment="Right"
                             IsVisible="{TemplateBinding IsMenuVisible}"

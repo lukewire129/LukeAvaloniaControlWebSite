@@ -14,7 +14,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Styles>
         <StyleInclude Source="./Components/SideMenu.axaml" />
-        <StyleInclude Source="./Components/BottomTab.axaml" />
         <Style Selector="ScrollViewer" />
     </UserControl.Styles>
     <Design.DataContext>
@@ -25,12 +24,11 @@
         <vm:MainViewModel />
     </Design.DataContext>
     <ScrollViewer Height="{Binding Height, ElementName=main}">
-        <StackPanel>
+        <Grid ColumnDefinitions="Auto, *">
             <components:SideMenu ItemsSource="{Binding SideMenus}" />
-            <Border Padding="0,20">
+            <Border Grid.Column="1" Padding="0,20">
                 <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>
-            <components:BottomTab Height="150" />
-        </StackPanel>
+        </Grid>
     </ScrollViewer>
 </UserControl>

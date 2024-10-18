@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="libs/repo/avalonianavigation/src/AvaloniaNavigationBar/Style/MagicBar.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="libs/repo/src/App.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
         <entry key="libs/repo/src/MainWindow.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
         <entry key="libs/repo/src/Pages/MagicBarSamplePage.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
@@ -23,8 +24,9 @@
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/BottomTab.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/Contact.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/Follow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/SideMenu.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/TopMenu.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
-        <entry key="lukewireBlog/lukewireBlog/Domain/Main/Index.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/Main/Index.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationBar/Index.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />

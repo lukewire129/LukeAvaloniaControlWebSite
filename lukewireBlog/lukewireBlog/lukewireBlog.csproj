@@ -41,18 +41,6 @@
         <DependentUpon>MainView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Domain\Main\Components\BottomTab.axaml.cs">
-        <DependentUpon>BottomTab.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="Domain\Main\Components\Contact.axaml.cs">
-        <DependentUpon>Contact.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="Domain\Main\Components\Follow.axaml.cs">
-        <DependentUpon>Follow.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
       <Compile Update="Domain\Main\Components\SideMenu.cs">
         <DependentUpon>SideMenu.axaml</DependentUpon>
       </Compile>
@@ -68,15 +56,6 @@
     <ItemGroup>
       <AdditionalFiles Include="Domain\Main\Components\Contact.axaml" />
       <AdditionalFiles Include="Domain\Main\Components\Follow.axaml" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <AvaloniaXaml Update="Domain\Main\Components\Contact.axaml">
-        <DependentUpon>BottomTab.axaml</DependentUpon>
-      </AvaloniaXaml>
-      <AvaloniaXaml Update="Domain\Main\Components\Follow.axaml">
-        <DependentUpon>BottomTab.axaml</DependentUpon>
-      </AvaloniaXaml>
     </ItemGroup>
 
     <ItemGroup>
@@ -116,6 +95,10 @@
 
     <ItemGroup>
       <UpToDateCheckInput Remove="Domain\About\Index.axaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\libs\repo\avalonianavigation\src\AvaloniaNavigationBar\AvaloniaNavigationBar.csproj" />
     </ItemGroup>
 
 </Project>

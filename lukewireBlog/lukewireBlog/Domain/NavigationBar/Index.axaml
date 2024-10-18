@@ -12,14 +12,39 @@
         <StyleInclude Source="avares://AvaloniaNavigationBar/Style/MagicBar.axaml" />
         <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2.axaml" />
         <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2Item.axaml" />
+        <Style Selector="TextBlock.Title">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="Foreground" Value="#2d2d2d" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        </Style>
     </UserControl.Styles>
-    <StackPanel>
-        <style:MagicBar>
-            <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
-            <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
-            <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
-            <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
-            <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
-        </style:MagicBar>
+
+    <StackPanel Spacing="30">
+        <StackPanel Width="440">
+            <TextBlock Classes="Title" Text="MagicBar" />
+            <Grid Background="#2d2d2d" Height="600">
+                <style:MagicBar VerticalAlignment="Bottom">
+                    <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
+                    <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
+                    <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
+                    <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
+                    <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
+                </style:MagicBar>
+            </Grid>
+        </StackPanel>
+        <StackPanel Width="440">
+            <TextBlock Classes="Title" Text="BottomNavigatorBarStyle2" />
+            <Grid Background="#2d2d2d" Height="600">
+                <style:BottomNavigatorBarStyle2 Background="White" VerticalAlignment="Bottom">
+                    <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
+                    <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
+                    <style:BottomNavigatorBarStyle2Item Kind="HeartOutline" Tag="Wishlist" />
+                    <style:BottomNavigatorBarStyle2Item Kind="Cart" Tag="Cart" />
+                    <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
+                </style:BottomNavigatorBarStyle2>
+            </Grid>
+        </StackPanel>
     </StackPanel>
 </UserControl>

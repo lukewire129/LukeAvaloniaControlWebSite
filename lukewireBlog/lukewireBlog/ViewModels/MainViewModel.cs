@@ -26,11 +26,10 @@ public partial class MainViewModel : ReactiveObject
 
     public MainViewModel()
     {
-        // Pages = new ViewModelBase[]
-        // {
-        //     new HomeViewModel(service),
-        //     new AboutViewModel(service),
-        // };
+        Pages = new ViewModelBase[]
+        {
+            new NavigationBarViewModel(),
+        };
 
         Pages[0].Load();
         CurrentPage = Pages[0];
