@@ -1,6 +1,6 @@
 <UserControl
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="1080"
+    d:DesignWidth="1920"
     mc:Ignorable="d"
     x:Class="lukewireBlog.Domain.NavigationBar.Index"
     xmlns="https://github.com/avaloniaui"
@@ -20,11 +20,13 @@
             <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
         </Style>
     </UserControl.Styles>
-
-    <StackPanel Spacing="30">
-        <StackPanel Width="440">
-            <TextBlock Classes="Title" Text="MagicBar" />
-            <Grid Background="#2d2d2d" Height="600">
+    <TabControl Margin="5">
+        <TabItem Header="MagicBar">
+            <Grid
+                Background="#2d2d2d"
+                Height="800"
+                HorizontalAlignment="Left"
+                Width="440">
                 <style:MagicBar VerticalAlignment="Bottom">
                     <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
                     <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
@@ -33,10 +35,13 @@
                     <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
                 </style:MagicBar>
             </Grid>
-        </StackPanel>
-        <StackPanel Width="440">
-            <TextBlock Classes="Title" Text="BottomNavigatorBarStyle2" />
-            <Grid Background="#2d2d2d" Height="600">
+        </TabItem>
+        <TabItem Header="BottomNavigatorBarStyle2">
+            <Grid
+                Background="#2d2d2d"
+                Height="800"
+                HorizontalAlignment="Left"
+                Width="440">
                 <style:BottomNavigatorBarStyle2 Background="White" VerticalAlignment="Bottom">
                     <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
                     <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
@@ -45,6 +50,6 @@
                     <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
                 </style:BottomNavigatorBarStyle2>
             </Grid>
-        </StackPanel>
-    </StackPanel>
+        </TabItem>
+    </TabControl>
 </UserControl>

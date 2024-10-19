@@ -14,7 +14,7 @@
         <Setter Property="Template">
             <ControlTemplate>
                 <TextBlock
-                    FontSize="15"
+                    FontSize="32"
                     Foreground="{StaticResource ColorWhite}"
                     Text="{Binding Name}"
                     VerticalAlignment="Center" />
@@ -26,7 +26,6 @@
     </Style>
 
     <Style Selector="controls|SideMenu">
-        <Setter Property="MinWidth" Value="370" />
         <Setter Property="ItemsPanel">
             <ItemsPanelTemplate>
                 <StackPanel Orientation="Vertical" Spacing="10" />
@@ -34,15 +33,9 @@
         </Setter>
         <Setter Property="Template">
             <ControlTemplate>
-                <Border Background="#2e2e2e" VerticalAlignment="Top">
-                    <Grid Margin="10,0" VerticalAlignment="Center">
-                        <ItemsPresenter
-                            HorizontalAlignment="Right"
-                            IsVisible="{TemplateBinding IsMenuVisible}"
-                            ItemsPanel="{TemplateBinding ItemsPanel}"
-                            x:Name="PART_ITEMS" />
-                    </Grid>
-                </Border>
+                <Grid Margin="10,10">
+                    <ItemsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" x:Name="PART_ITEMS" />
+                </Grid>
             </ControlTemplate>
         </Setter>
     </Style>

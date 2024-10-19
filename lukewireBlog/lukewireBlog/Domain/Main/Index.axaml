@@ -23,12 +23,14 @@
         -->
         <vm:MainViewModel />
     </Design.DataContext>
-    <ScrollViewer Height="{Binding Height, ElementName=main}">
-        <Grid ColumnDefinitions="Auto, *">
+    <Grid ColumnDefinitions="Auto, *">
+        <Grid Background="#316cf4" Width="370">
             <components:SideMenu ItemsSource="{Binding SideMenus}" />
-            <Border Grid.Column="1" Padding="0,20">
+        </Grid>
+        <ScrollViewer Grid.Column="1" Height="{Binding Height, ElementName=main}">
+            <Border Padding="0,20">
                 <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>
-        </Grid>
-    </ScrollViewer>
+        </ScrollViewer>
+    </Grid>
 </UserControl>

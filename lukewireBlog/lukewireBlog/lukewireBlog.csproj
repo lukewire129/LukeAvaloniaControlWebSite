@@ -51,11 +51,11 @@
         <DependentUpon>MainWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Remove="Components\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Domain\Main\Components\Contact.axaml" />
-      <AdditionalFiles Include="Domain\Main\Components\Follow.axaml" />
+      <AdditionalFiles Remove="Components\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -87,10 +87,7 @@
       <AvaloniaResource Include="Assets\Fonts\NotoSansKR-Thin.ttf">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </AvaloniaResource>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Components\" />
+      <AvaloniaResource Remove="Components\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -99,6 +96,18 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\libs\repo\avalonianavigation\src\AvaloniaNavigationBar\AvaloniaNavigationBar.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaXaml Remove="Components\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Components\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Components\**" />
     </ItemGroup>
 
 </Project>
