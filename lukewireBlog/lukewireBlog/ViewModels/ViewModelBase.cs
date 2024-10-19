@@ -4,6 +4,7 @@ namespace lukewireBlog.ViewModels;
 
 public abstract class ViewModelBase : ReactiveObject
 {
+    
     public ViewModelBase()
     {
     }

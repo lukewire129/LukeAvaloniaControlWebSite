@@ -15,6 +15,7 @@
         <entry key="lukewireBlog/lukewireBlog/Components/BottopTab.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/Contact.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/Follow.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Components/Markd.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/MarkdownViewer.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/TopMenu.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Components/aaa.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
@@ -30,6 +31,7 @@
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationBar/Index.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Styles/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/AView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/AboutView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Views/BView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />

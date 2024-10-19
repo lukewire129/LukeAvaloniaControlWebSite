@@ -27,10 +27,8 @@
         <Grid Background="#316cf4" Width="370">
             <components:SideMenu ItemsSource="{Binding SideMenus}" />
         </Grid>
-        <ScrollViewer Grid.Column="1" Height="{Binding Height, ElementName=main}">
-            <Border Padding="0,20">
-                <TransitioningContentControl Content="{Binding CurrentPage}" />
-            </Border>
-        </ScrollViewer>
+        <Border Grid.Column="1" Padding="0,20">
+            <TransitioningContentControl Content="{Binding CurrentPage}" Height="{Binding Height, ElementName=main}" />
+        </Border>
     </Grid>
 </UserControl>
