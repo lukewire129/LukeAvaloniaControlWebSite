@@ -1,0 +1,3 @@
+[submodule "libs/repo/navigationpage"]
+	path = libs/repo/navigationpage
+	url = https://github.com/lukewire129/AvaloniaNavigationPage.git
