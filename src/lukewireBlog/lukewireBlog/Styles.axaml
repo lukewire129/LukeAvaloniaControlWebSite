@@ -1,0 +1,183 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:ctxt="clr-namespace:ColorTextBlock.Avalonia;assembly=ColorTextBlock.Avalonia"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!--  Add Controls for Previewer Here  -->
+        </Border>
+    </Design.PreviewWith>
+
+    <Styles.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+                    <Color x:Key="BackgroundColor2">#F8F8F8</Color>
+                    <Color x:Key="BackgroundColor3">#F0F0F0</Color>
+                    <Color x:Key="BackgroundColor4">#E8E8E8</Color>
+                    <Color x:Key="BackgroundColor5">#E0E0E0</Color>
+                    <Color x:Key="ForegroundColor">#202020</Color>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                    <Color x:Key="BackgroundColor">#101010</Color>
+                    <Color x:Key="BackgroundColor2">#181818</Color>
+                    <Color x:Key="BackgroundColor3">#202020</Color>
+                    <Color x:Key="BackgroundColor4">#282828</Color>
+                    <Color x:Key="BackgroundColor5">#303030</Color>
+                    <Color x:Key="ForegroundColor">#F0F0F0</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Styles.Resources>
+
+    <Style Selector="Button.editor">
+        <Setter Property="Padding" Value="10 5 10 5" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="Button.editor:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor3}" />
+    </Style>
+
+    <Style Selector="Button.navigation">
+        <Setter Property="Padding" Value="10 5 10 5" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="Button.navigation:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor3}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+
+    <Style Selector="Button:pointerover">
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style Selector="TabStrip" />
+    <Style Selector="TabStrip /template/ Border#PART_BorderSeparator">
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+    <Style Selector="TabStripItem:pointerover /template/ Border#PART_SelectedPipe">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor3}" />
+    </Style>
+    <Style Selector="TabStripItem:selected /template/ Border#PART_SelectedPipe">
+        <Setter Property="Background" Value="{DynamicResource ForegroundColor}" />
+    </Style>
+
+    <Style Selector="ScrollViewer /template/ ScrollBar:horizontal">
+        <Setter Property="Height" Value="5" />
+    </Style>
+    <Style Selector="ScrollViewer /template/ ScrollBar:horizontal Thumb">
+        <Setter Property="Height" Value="5" />
+    </Style>
+    <!--  Markdown Styles  -->
+    <Style Selector="Border.Blockquote">
+        <Setter Property="Margin" Value="0 10 0 10" />
+        <Setter Property="BorderThickness" Value="5 0 0 0 " />
+        <Setter Property="BorderBrush" Value="{DynamicResource BackgroundColor4}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor2}" />
+    </Style>
+
+    <Style Selector="ctxt|CCode">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor2}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="Border.CodeBlock">
+        <Setter Property="Margin" Value="0 10 0 10" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor2}" />
+    </Style>
+
+    <Style Selector="ctxt|CTextBlock.Heading1">
+        <Setter Property="FontSize" Value="36" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.Heading2">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.Heading3">
+        <Setter Property="FontSize" Value="21" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.Heading4">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.Heading5">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.Heading6">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="{DynamicResource ForegroundColor}" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+
+    <Style Selector="ctxt|CHyperlink">
+        <Setter Property="Foreground" Value="#8080FF" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="ctxt|CHyperlink:pointerover">
+        <Setter Property="Foreground" Value="#7878FF" />
+    </Style>
+    <Style Selector="ctxt|CHyperlink:pressed">
+        <Setter Property="Foreground" Value="#7070FF" />
+    </Style>
+
+    <Style Selector="Grid.List">
+        <Setter Property="Margin" Value="0 10 0 10" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+    </Style>
+    <Style Selector=".List ctxt|CTextBlock">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="ctxt|CTextBlock.ListMarker">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+
+    <Style Selector="Border.Table">
+        <Setter Property="Margin" Value="0 10 0 10" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BackgroundColor5}" />
+    </Style>
+    <Style Selector="Grid.Table">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+    </Style>
+    <Style Selector="Border.TableHeader">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BackgroundColor5}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor3}" />
+    </Style>
+    <Style Selector="Border.TableHeader ctxt|CTextBlock">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Style Selector="Border.OddTableRow">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BackgroundColor5}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor2}" />
+    </Style>
+    <Style Selector="Border.EvenTableRow">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BackgroundColor5}" />
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor3}" />
+    </Style>
+</Styles>
