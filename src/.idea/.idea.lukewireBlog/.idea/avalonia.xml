@@ -4,6 +4,8 @@
     <option name="projectPerEditor">
       <map>
         <entry key="../libs/repo/navigationpage/src/NavigationPage/AvaloniaNavigationView/NavigationView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="../libs/repo/navigationpage/src/libs/repo/navigationbar/src/AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2Item.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="../libs/repo/navigationpage/src/libs/repo/navigationbar/src/AvaloniaNavigationBar/Style/MagicBar.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="libs/repo/avalonianavigation/src/AvaloniaNavigationBar/Style/MagicBar.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="libs/repo/src/App.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
         <entry key="libs/repo/src/MainWindow.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
@@ -45,6 +47,7 @@
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Index.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Style2.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Style2View.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/RitotPlayButton/Index.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />

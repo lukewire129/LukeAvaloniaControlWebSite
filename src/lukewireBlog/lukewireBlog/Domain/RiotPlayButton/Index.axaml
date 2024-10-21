@@ -1,0 +1,23 @@
+<UserControl
+    Background="#191919"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="lukewireBlog.Domain.RiotPlayButton.Index"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <StyleInclude Source="avares://LolPlayButton/Styles.axaml" />
+    </UserControl.Styles>
+    <Viewbox Stretch="Uniform">
+        <Border Padding="50,20">
+
+            <ToggleButton
+                Classes="lolPlayButton"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+        </Border>
+    </Viewbox>
+</UserControl>

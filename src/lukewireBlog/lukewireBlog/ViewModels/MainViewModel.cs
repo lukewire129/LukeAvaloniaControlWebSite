@@ -20,7 +20,8 @@ public partial class MainViewModel : ReactiveObject
     public List<TapMenuModel> SideMenus { get; set; } = new()
     {
         new TapMenuModel(0, "NavigationBar"),
-        new TapMenuModel(1, "NavigationView"),
+        new TapMenuModel(1, "NavigationView"),  
+        new TapMenuModel(2, "RiotPlayButton"),
     };
 
     public ICommand NavigateCommand { get; }
@@ -31,6 +32,7 @@ public partial class MainViewModel : ReactiveObject
         {
             new NavigationBarViewModel(),
             new NavigationViewViewModel(),
+            new RiotPlayButtonViewModel(),
         };
 
         Pages[0].Load();

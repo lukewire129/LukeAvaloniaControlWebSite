@@ -93,6 +93,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\..\libs\repo\navigationpage\src\libs\repo\navigationbar\src\AvaloniaNavigationBar\AvaloniaNavigationBar.csproj" />
       <ProjectReference Include="..\..\..\libs\repo\navigationpage\src\NavigationPage\AvaloniaNavigationView\AvaloniaNavigationView.csproj" />
+      <ProjectReference Include="..\..\..\libs\repo\riotplaybutton\src\LolPlayButton\LolPlayButton.csproj" />
     </ItemGroup>
 
 </Project>

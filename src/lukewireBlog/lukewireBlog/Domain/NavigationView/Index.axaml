@@ -10,12 +10,14 @@
     xmlns:views="clr-namespace:lukewireBlog.Domain.NavigationView"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <TabControl Margin="5">
-        <TabItem Header="BrandNavigationView">
-            <views:BrandNavigationView DataContext="{Binding BrandViewModel}" />
-        </TabItem>
-        <TabItem Header="BottomNavigatorBarStyle2">
-            <views:BottomNavigatorBarStyle2View DataContext="{Binding BottomNavigationBarStyle2ViewModel}" />
-        </TabItem>
-    </TabControl>
+    <Viewbox Margin="50" Stretch="Uniform">
+        <TabControl Margin="5">
+            <TabItem Header="BrandNavigationView">
+                <views:BrandNavigationView DataContext="{Binding BrandViewModel}" />
+            </TabItem>
+            <TabItem Header="BottomNavigatorBarStyle2">
+                <views:BottomNavigatorBarStyle2View DataContext="{Binding BottomNavigationBarStyle2ViewModel}" />
+            </TabItem>
+        </TabControl>
+    </Viewbox>
 </UserControl>
