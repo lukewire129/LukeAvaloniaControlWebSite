@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="../libs/repo/navigationpage/src/NavigationPage/AvaloniaNavigationView/NavigationView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="libs/repo/avalonianavigation/src/AvaloniaNavigationBar/Style/MagicBar.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="libs/repo/src/App.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
         <entry key="libs/repo/src/MainWindow.axaml" value="libs/repo/src/AvaloniaNavigationBar.csproj" />
@@ -29,6 +30,21 @@
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Components/TopMenu.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/Main/Index.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Domain/NavigationBar/Index.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/BottomNavigatorBarStyle2View.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/BrandNavigationView.axaml" value="lukewireBlog/lukewireBlog.Desktop/lukewireBlog.Desktop.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/AContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/AppleView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/BContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/BrandNaviPage.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/BrandNavigationView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/CContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/DContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/EContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Components/MicrosoftView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/EContentView.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Index.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Style2.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
+        <entry key="lukewireBlog/lukewireBlog/Domain/NavigationView/Style2View.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/MainWindow.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />
         <entry key="lukewireBlog/lukewireBlog/Styles/Styles.axaml" value="lukewireBlog/lukewireBlog.Browser/lukewireBlog.Browser.csproj" />

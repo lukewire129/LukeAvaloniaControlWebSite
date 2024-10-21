@@ -37,70 +37,36 @@
             </Setter>
         </Style>
     </UserControl.Styles>
-    <Grid ColumnDefinitions="500, *">
-        <TabControl Margin="5">
-            <TabItem Header="MagicBar">
-                <Grid
-                    Background="#2d2d2d"
-                    Height="800"
-                    HorizontalAlignment="Left"
-                    Width="440">
-                    <style:MagicBar VerticalAlignment="Bottom">
-                        <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
-                        <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
-                        <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
-                        <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
-                        <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
-                    </style:MagicBar>
-                </Grid>
-            </TabItem>
-            <TabItem Header="BottomNavigatorBarStyle2">
-                <Grid
-                    Background="#2d2d2d"
-                    Height="800"
-                    HorizontalAlignment="Left"
-                    Width="440">
-                    <style:BottomNavigatorBarStyle2 Background="White" VerticalAlignment="Bottom">
-                        <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
-                        <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
-                        <style:BottomNavigatorBarStyle2Item Kind="HeartOutline" Tag="Wishlist" />
-                        <style:BottomNavigatorBarStyle2Item Kind="Cart" Tag="Cart" />
-                        <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
-                    </style:BottomNavigatorBarStyle2>
-                </Grid>
-            </TabItem>
-        </TabControl>
-        <ScrollViewer Grid.Column="1">
-            <StackPanel Spacing="20">
-                <StackPanel Orientation="Horizontal">
-                    <Button
-                        Command="{Binding ReadmdCommand}"
-                        CommandParameter="0"
-                        Content="Kor" />
-                    <Button
-                        Command="{Binding ReadmdCommand}"
-                        CommandParameter="1"
-                        Content="Eng" />
-                </StackPanel>
-                <Label
-                    Classes="GithubLinkButton"
-                    Content="{Binding GithubText}"
-                    Tag="https://github.com/lukewire129/navigationbar-avaloniaui" />
-                <!--  <Border  -->
-                <!--  Background="White"  -->
-                <!--  BorderBrush="#2f2f2f"  -->
-                <!--  BorderThickness="1"  -->
-                <!--  Margin="10"  -->
-                <!--  Padding="50">  -->
-                <!--    -->
-                <!--     <md:MarkdownScrollViewer Markdown="{Binding Markdown}" MaxWidth="1000"> -->
-                <!--         <md:MarkdownScrollViewer.Styles> -->
-                <!--             <StyleInclude Source="avares://lukewireBlog/Styles/Styles.axaml" /> -->
-                <!--         </md:MarkdownScrollViewer.Styles> -->
-                <!--    -->
-                <!--     </md:MarkdownScrollViewer> -->
-                <!-- </Border> -->
-            </StackPanel>
-        </ScrollViewer>
-    </Grid>
+    <TabControl Margin="5">
+        <TabItem Header="MagicBar">
+            <Grid
+                Background="#2d2d2d"
+                Height="750"
+                HorizontalAlignment="Left"
+                Width="440">
+                <style:MagicBar VerticalAlignment="Bottom">
+                    <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
+                    <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
+                    <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
+                    <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
+                    <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
+                </style:MagicBar>
+            </Grid>
+        </TabItem>
+        <TabItem Header="BottomNavigatorBarStyle2">
+            <Grid
+                Background="#2d2d2d"
+                Height="750"
+                HorizontalAlignment="Left"
+                Width="440">
+                <style:BottomNavigatorBarStyle2 Background="White" VerticalAlignment="Bottom">
+                    <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
+                    <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
+                    <style:BottomNavigatorBarStyle2Item Kind="HeartOutline" Tag="Wishlist" />
+                    <style:BottomNavigatorBarStyle2Item Kind="Cart" Tag="Cart" />
+                    <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
+                </style:BottomNavigatorBarStyle2>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </UserControl>

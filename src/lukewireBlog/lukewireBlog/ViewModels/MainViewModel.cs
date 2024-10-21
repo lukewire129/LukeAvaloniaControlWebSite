@@ -20,6 +20,7 @@ public partial class MainViewModel : ReactiveObject
     public List<TapMenuModel> SideMenus { get; set; } = new()
     {
         new TapMenuModel(0, "NavigationBar"),
+        new TapMenuModel(1, "NavigationView"),
     };
 
     public ICommand NavigateCommand { get; }
@@ -29,6 +30,7 @@ public partial class MainViewModel : ReactiveObject
         Pages = new ViewModelBase[]
         {
             new NavigationBarViewModel(),
+            new NavigationViewViewModel(),
         };
 
         Pages[0].Load();

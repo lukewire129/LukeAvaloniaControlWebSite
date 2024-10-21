@@ -1,0 +1,44 @@
+<UserControl
+    Height="750"
+    HorizontalAlignment="Left"
+    Width="440"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="lukewireBlog.Domain.NavigationView.BrandNavigationView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:avaloniaNavigationView="clr-namespace:AvaloniaNavigationView;assembly=AvaloniaNavigationView"
+    xmlns:components="clr-namespace:lukewireBlog.Domain.NavigationView.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:style="clr-namespace:AvaloniaNavigationBar.Style;assembly=AvaloniaNavigationBar"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <StyleInclude Source="avares://AvaloniaNavigationBar/Style/MagicBar.axaml" />
+        <Style Selector="TextBlock.Title">
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="Foreground" Value="#2d2d2d" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+        </Style>
+    </UserControl.Styles>
+    <avaloniaNavigationView:NavigationView Background="White" x:Name="naviView">
+        <avaloniaNavigationView:NavigationView.PageItems>
+            <components:AContentView />
+            <components:AContentView />
+            <components:AContentView />
+            <components:AContentView />
+            <components:AContentView />
+        </avaloniaNavigationView:NavigationView.PageItems>
+        <avaloniaNavigationView:NavigationView.NavigtorContent>
+            <style:MagicBar>
+                <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
+                <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
+                <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
+                <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
+                <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
+            </style:MagicBar>
+        </avaloniaNavigationView:NavigationView.NavigtorContent>
+    </avaloniaNavigationView:NavigationView>
+</UserControl>

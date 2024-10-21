@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace lukewireBlog.ViewModels;
+namespace lukewireBlog;
 
 public abstract class ViewModelBase : ReactiveObject
 {
