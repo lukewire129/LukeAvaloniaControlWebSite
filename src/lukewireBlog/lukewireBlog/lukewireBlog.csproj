@@ -94,6 +94,10 @@
       <ProjectReference Include="..\..\..\libs\repo\navigationpage\src\libs\repo\navigationbar\src\AvaloniaNavigationBar\AvaloniaNavigationBar.csproj" />
       <ProjectReference Include="..\..\..\libs\repo\navigationpage\src\NavigationPage\AvaloniaNavigationView\AvaloniaNavigationView.csproj" />
       <ProjectReference Include="..\..\..\libs\repo\riotplaybutton\src\LolPlayButton\LolPlayButton.csproj" />
+      <ProjectReference Include="..\..\..\libs\repo\smartdate\SmartDateControl\SmartDateControl.csproj" />
+      <ProjectReference Include="..\..\..\libs\repo\social3d\src\SocialIcon.Icon\SocialIcon.Icon.csproj" />
+      <ProjectReference Include="..\..\libs\repo\smartdate\SmartDateControl\SmartDateControl.csproj" />
+      <ProjectReference Include="..\..\libs\repo\social3d\src\SocialIcon.Icon\SocialIcon.Icon.csproj" />
     </ItemGroup>
 
 </Project>

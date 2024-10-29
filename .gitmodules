@@ -4,3 +4,9 @@
 [submodule "libs/repo/riotplaybutton"]
 	path = libs/repo/riotplaybutton
 	url = https://github.com/lukewire129/riotplaybutton-avaloniaui.git
+[submodule "libs/repo/smartdate"]
+	path = libs/repo/smartdate
+	url = https://github.com/lukewire129/smartdate_avalonia.git
+[submodule "libs/repo/social3d"]
+	path = libs/repo/social3d
+	url = https://github.com/lukewire129/SocialIcon3d-Avalonia.git

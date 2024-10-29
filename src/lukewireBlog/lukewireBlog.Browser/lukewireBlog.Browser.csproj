@@ -8,6 +8,7 @@
     <ItemGroup>
         <PackageReference Include="Avalonia.Browser" Version="11.1.4" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.4" />
+        <PackageReference Include="Projektanker.Icons.Avalonia.FontAwesome" Version="9.4.1" />
     </ItemGroup>
 
     <ItemGroup>

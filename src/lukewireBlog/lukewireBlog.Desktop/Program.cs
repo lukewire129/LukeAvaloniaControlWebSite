@@ -2,6 +2,7 @@
 using Avalonia;
 using Avalonia.ReactiveUI;
 using Projektanker.Icons.Avalonia;
+using Projektanker.Icons.Avalonia.FontAwesome;
 using Projektanker.Icons.Avalonia.MaterialDesign;
 
 namespace lukewireBlog.Desktop;
@@ -19,7 +20,8 @@ sealed class Program
     public static AppBuilder BuildAvaloniaApp()
     {
         IconProvider.Current
-            .Register<MaterialDesignIconProvider>();
+            .Register<MaterialDesignIconProvider>()
+            .Register<FontAwesomeIconProvider>();
         
         return AppBuilder.Configure<App>()
             .UsePlatformDetect()

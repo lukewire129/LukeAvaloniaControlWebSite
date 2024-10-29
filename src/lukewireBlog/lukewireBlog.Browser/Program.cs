@@ -8,6 +8,7 @@ using Avalonia.Logging;
 using Avalonia.ReactiveUI;
 using lukewireBlog;
 using Projektanker.Icons.Avalonia;
+using Projektanker.Icons.Avalonia.FontAwesome;
 using Projektanker.Icons.Avalonia.MaterialDesign;
 
 [assembly: SupportedOSPlatform("browser")]
@@ -23,7 +24,8 @@ internal sealed partial class Program
     public static AppBuilder BuildAvaloniaApp()
     {
         IconProvider.Current
-            .Register<MaterialDesignIconProvider>();
+            .Register<MaterialDesignIconProvider>()
+            .Register<FontAwesomeIconProvider>();
         
         return AppBuilder.Configure<App>()
             .UseReactiveUI();

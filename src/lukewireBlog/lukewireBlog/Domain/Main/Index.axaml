@@ -23,7 +23,7 @@
         -->
         <vm:MainViewModel />
     </Design.DataContext>
-    <Grid RowDefinitions="30, *">
+    <Grid RowDefinitions="50, *">
         <Grid Background="#316cf4" x:Name="grdTop">
             <StackPanel
                 Margin="10,0"
@@ -44,7 +44,12 @@
                         VerticalAlignment="Center"
                         x:Name="ico" />
                 </Grid>
-                <TextBlock Foreground="White" VerticalAlignment="Center">Avalonia TemplateControl Sample</TextBlock>
+                <TextBlock
+                    FontSize="20"
+                    Foreground="White"
+                    VerticalAlignment="Center">
+                    Avalonia TemplateControl Sample
+                </TextBlock>
             </StackPanel>
         </Grid>
         <Grid
