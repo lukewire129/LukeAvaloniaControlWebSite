@@ -1,4 +1,4 @@
-using AvaloniaNavigationView.ViewModels;
+using AvaloniaNavigationView.ViewModel;
 
 namespace lukewireBlog.Domain.NavigationView.Components.ViewModels;
 

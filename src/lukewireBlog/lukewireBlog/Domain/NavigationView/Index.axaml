@@ -4,20 +4,42 @@
     mc:Ignorable="d"
     x:Class="lukewireBlog.Domain.NavigationView.Index"
     xmlns="https://github.com/avaloniaui"
+    xmlns:components="clr-namespace:lukewireBlog.Domain.NavigationView.Components"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:lukewireBlog="clr-namespace:lukewireBlog"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:lukewireBlog.Domain.NavigationView"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-    <Viewbox Margin="50" Stretch="Uniform">
-        <TabControl Margin="5">
-            <TabItem Header="BrandNavigationView">
-                <views:BrandNavigationView DataContext="{Binding BrandViewModel}" />
-            </TabItem>
-            <TabItem Header="BottomNavigatorBarStyle2">
-                <views:BottomNavigatorBarStyle2View DataContext="{Binding BottomNavigationBarStyle2ViewModel}" />
-            </TabItem>
-        </TabControl>
-    </Viewbox>
+    <UserControl.Styles>
+        <StyleInclude Source="avares://lukewireBlog/Domain/NavigationView/Components/iPhone.axaml" />
+    </UserControl.Styles>
+    <TabControl Margin="5">
+        <TabItem Header="BrandNavigationView">
+            <Viewbox Margin="50" Stretch="Uniform">
+                <components:iPhone>
+                    <components:iPhone.Content>
+                        <Viewbox Stretch="Uniform">
+                            <views:BrandNavigationView
+                                DataContext="{Binding BrandViewModel}"
+                                Height="920"
+                                Width="440" />
+                        </Viewbox>
+                    </components:iPhone.Content>
+                </components:iPhone>
+            </Viewbox>
+        </TabItem>
+        <TabItem Header="BottomNavigatorBarStyle2">
+            <Viewbox Margin="50" Stretch="Uniform">
+                <components:iPhone>
+                    <components:iPhone.Content>
+                        <Viewbox Stretch="Uniform">
+                            <views:BottomNavigatorBarStyle2View
+                                DataContext="{Binding BottomNavigationBarStyle2ViewModel}"
+                                Height="920"
+                                Width="440" />
+                        </Viewbox>
+                    </components:iPhone.Content>
+                </components:iPhone>
+            </Viewbox>
+        </TabItem>
+    </TabControl>
 </UserControl>

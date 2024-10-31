@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using AvaloniaNavigationBar;
-using AvaloniaNavigationView.ViewModels;
+using AvaloniaNavigationView;
+using AvaloniaNavigationView.ViewModel;
 
 namespace lukewireBlog.Domain.NavigationView.Components.ViewModels;
 

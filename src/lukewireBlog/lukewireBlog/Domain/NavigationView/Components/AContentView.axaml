@@ -1,5 +1,4 @@
 <UserControl
-    Background="#222222"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d"
@@ -10,7 +9,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <TextBlock
         FontSize="32"
-        Foreground="White"
+        Foreground="Black"
         HorizontalAlignment="Center"
         Text="{Binding Title}"
         VerticalAlignment="Center" />

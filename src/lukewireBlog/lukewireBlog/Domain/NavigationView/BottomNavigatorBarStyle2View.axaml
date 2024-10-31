@@ -16,6 +16,7 @@
     <UserControl.Styles>
         <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2Item.axaml" />
         <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2.axaml" />
+        <StyleInclude Source="avares://AvaloniaNavigationView/NavigationView.axaml" />
     </UserControl.Styles>
     <avaloniaNavigationView:NavigationView Background="White" x:Name="naviView">
         <avaloniaNavigationView:NavigationView.PageItems>

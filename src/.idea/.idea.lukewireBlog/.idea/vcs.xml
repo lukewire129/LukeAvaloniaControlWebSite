@@ -6,5 +6,7 @@
     <mapping directory="$PROJECT_DIR$/../libs/repo/navigationpage" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../libs/repo/navigationpage/src/libs/repo/navigationbar" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../libs/repo/riotplaybutton" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../libs/repo/smartdate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../libs/repo/social3d" vcs="Git" />
   </component>
 </project>

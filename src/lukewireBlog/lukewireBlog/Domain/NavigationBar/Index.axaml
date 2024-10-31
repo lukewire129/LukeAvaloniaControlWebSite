@@ -37,29 +37,24 @@
             </Setter>
         </Style>
     </UserControl.Styles>
-    <Viewbox Margin="50" Stretch="Uniform">
-        <TabControl Margin="5">
-            <TabItem Header="MagicBar">
-                <Grid
-                    Background="#222222"
-                    Height="750"
-                    HorizontalAlignment="Center"
-                    Width="440">
-                    <style:MagicBar VerticalAlignment="Bottom">
+
+    <TabControl Margin="5">
+        <TabItem Header="MagicBar">
+            <Grid Background="#222222">
+                <Viewbox Margin="50" Stretch="Uniform">
+                    <style:MagicBar Background="#222222">
                         <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
                         <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
                         <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
                         <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
                         <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
                     </style:MagicBar>
-                </Grid>
-            </TabItem>
-            <TabItem Header="BottomNavigatorBarStyle2">
-                <Grid
-                    Background="#222222"
-                    Height="750"
-                    HorizontalAlignment="Center"
-                    Width="440">
+                </Viewbox>
+            </Grid>
+        </TabItem>
+        <TabItem Header="BottomNavigatorBarStyle2">
+            <Grid Background="#222222">
+                <Viewbox Margin="50">
                     <style:BottomNavigatorBarStyle2 Background="White" VerticalAlignment="Bottom">
                         <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
                         <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
@@ -67,8 +62,8 @@
                         <style:BottomNavigatorBarStyle2Item Kind="Cart" Tag="Cart" />
                         <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
                     </style:BottomNavigatorBarStyle2>
-                </Grid>
-            </TabItem>
-        </TabControl>
-    </Viewbox>
+                </Viewbox>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </UserControl>

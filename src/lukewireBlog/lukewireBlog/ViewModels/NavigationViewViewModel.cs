@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using AvaloniaNavigationBar;
-using AvaloniaNavigationView.ViewModels;
-using lukewireBlog.Domain.NavigationView.Components;
 using lukewireBlog.Domain.NavigationView.Components.ViewModels;
 
 namespace lukewireBlog.ViewModels;
