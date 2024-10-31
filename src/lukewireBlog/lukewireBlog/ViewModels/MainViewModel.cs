@@ -24,6 +24,7 @@ public partial class MainViewModel : ReactiveObject
         new TapMenuModel(2, "RiotPlayButton"),
         new TapMenuModel(3, "DatePickerStyle"),
         new TapMenuModel(4, "SocialICon"),
+        new TapMenuModel(5, "ThemeSwitch"),
     };
 
     public ICommand NavigateCommand { get; }
@@ -36,7 +37,8 @@ public partial class MainViewModel : ReactiveObject
             new NavigationViewViewModel(),
             new RiotPlayButtonViewModel(),
             new SmartDateViewModel(),
-            new SocialIconViewModel()
+            new SocialIconViewModel(),
+            new ThemeSwitchViewModel()
         };
 
         Pages[0].Load();

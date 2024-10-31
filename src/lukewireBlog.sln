@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDateControl", "..\libs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialIcon.Icon", "..\libs\repo\social3d\src\SocialIcon.Icon\SocialIcon.Icon.csproj", "{D5E1F262-4EEA-4F8A-8E92-8F64521CF5FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeSwitch", "..\libs\repo\themeswitch\src\ThemeSwitch\ThemeSwitch.csproj", "{CBF7456A-A1BF-45EC-B0D0-103604B53F93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,5 +76,9 @@ Global
 		{D5E1F262-4EEA-4F8A-8E92-8F64521CF5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E1F262-4EEA-4F8A-8E92-8F64521CF5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E1F262-4EEA-4F8A-8E92-8F64521CF5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF7456A-A1BF-45EC-B0D0-103604B53F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF7456A-A1BF-45EC-B0D0-103604B53F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF7456A-A1BF-45EC-B0D0-103604B53F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF7456A-A1BF-45EC-B0D0-103604B53F93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

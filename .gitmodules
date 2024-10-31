@@ -13,3 +13,6 @@
 [submodule "libs/repo/social3d"]
 	path = libs/repo/social3d
 	url = https://github.com/lukewire129/SocialIcon3d-Avalonia.git
+[submodule "libs/repo/themeswitch"]
+	path = libs/repo/themeswitch
+	url = https://github.com/lukewire129/themeSwitch-avalonia.git
