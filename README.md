@@ -1,4 +1,6 @@
-# Avalonia Web Control Collection
+# Avalonia Web Control Collection Web
+
+[Go](https://delightful-profiterole-0fa25d.netlify.app/)
 ## Project Overview
 This repository started as a test to see how well Avalonia could run a UI through the web. Initially, I considered approaching it as a blog, but I wanted a more effective way to showcase Avalonia's various controls. That led me to collect and organize my Avalonia control sources into a single collection.
 
@@ -14,9 +16,4 @@ I plan to continue adding more Avalonia controls in the future, so please stay t
 ### Git clone
 ```
 git clone --recurse-submodules https://github.com/lukewire129/lukewireBlogAvalonia.git
-```
-
-### ServerUrl
-```
-https://delightful-profiterole-0fa25d.netlify.app/
 ```
