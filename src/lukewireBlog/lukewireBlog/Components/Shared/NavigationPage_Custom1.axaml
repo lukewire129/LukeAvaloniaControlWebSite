@@ -1,0 +1,49 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:avaloniaNavigationView="clr-namespace:AvaloniaNavigationView;assembly=AvaloniaNavigationView"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:style="clr-namespace:AvaloniaNavigationBar.Style;assembly=AvaloniaNavigationBar"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/iPhone.axaml" />
+    <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2Item.axaml" />
+    <StyleInclude Source="avares://AvaloniaNavigationBar/Style/BottomNavigatorBarStyle2.axaml" />
+    <StyleInclude Source="avares://AvaloniaNavigationView/NavigationView.axaml" />
+    <Design.PreviewWith>
+        <shared:NavigationPage_Custom1 />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|NavigationPage_Custom1">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <shared:iPhone>
+                    <shared:iPhone.Content>
+                        <Viewbox Stretch="Uniform">
+                            <avaloniaNavigationView:NavigationView
+                                Background="White"
+                                Height="750"
+                                Width="440">
+                                <avaloniaNavigationView:NavigationView.PageItems>
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                </avaloniaNavigationView:NavigationView.PageItems>
+                                <avaloniaNavigationView:NavigationView.NavigtorContent>
+                                    <style:BottomNavigatorBarStyle2 x:Name="PART_NAVI">
+                                        <style:BottomNavigatorBarStyle2Item Kind="Home" Tag="Home" />
+                                        <style:BottomNavigatorBarStyle2Item Kind="Shop" Tag="Shop" />
+                                        <style:BottomNavigatorBarStyle2Item Kind="HeartOutline" Tag="Wishlist" />
+                                        <style:BottomNavigatorBarStyle2Item Kind="Cart" Tag="Cart" />
+                                        <style:BottomNavigatorBarStyle2Item Kind="PersonOutline" Tag="Me" />
+                                    </style:BottomNavigatorBarStyle2>
+                                </avaloniaNavigationView:NavigationView.NavigtorContent>
+                            </avaloniaNavigationView:NavigationView>
+                        </Viewbox>
+                    </shared:iPhone.Content>
+                </shared:iPhone>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

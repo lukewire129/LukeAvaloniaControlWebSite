@@ -8,5 +8,6 @@
     <mapping directory="$PROJECT_DIR$/../libs/repo/riotplaybutton" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../libs/repo/smartdate" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../libs/repo/social3d" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../libs/repo/themeswitch" vcs="Git" />
   </component>
 </project>

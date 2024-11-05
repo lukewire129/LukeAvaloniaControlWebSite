@@ -1,0 +1,25 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:style="clr-namespace:AvaloniaNavigationBar.Style;assembly=AvaloniaNavigationBar"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://AvaloniaNavigationBar/Style/MagicBar.axaml" />
+    <Design.PreviewWith>
+        <shared:NavigationView_MagicBar />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|NavigationView_MagicBar">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <style:MagicBar Background="#222222" x:Name="PART_NAVI">
+                    <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
+                    <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
+                    <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
+                    <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
+                    <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
+                </style:MagicBar>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

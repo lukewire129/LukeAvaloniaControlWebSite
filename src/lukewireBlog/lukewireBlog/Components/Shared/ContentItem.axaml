@@ -1,0 +1,48 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:lukewireBlog.Components.Shared"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationView_MagicBar.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationView_Custom1.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationPage_Custom1.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationPage_Brand.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/RiotButtonView.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/SmartDateView.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/SocialIcon3dView.axaml" />
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/ThemeSwitchView.axaml" />
+    <Design.PreviewWith>
+        <controls:ContentItem />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|ContentItem">
+        <Setter Property="Command" Value="{Binding Path=DataContext.DetailCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:ContentBox}}}" />
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Margin="20">
+                    <Border
+                        Background="#222222"
+                        BoxShadow="5 5 10 0 Gray"
+                        CornerRadius="10"
+                        Height="500"
+                        Padding="10"
+                        Width="350">
+                        <Grid Grid.RowDefinitions="*, 30">
+                            <Viewbox Stretch="Uniform">
+                                <ContentPresenter Content="{Binding Content}" />
+                            </Viewbox>
+                            <TextBlock
+                                Cursor="hand"
+                                FontSize="20"
+                                Foreground="White"
+                                Grid.Row="1"
+                                HorizontalAlignment="Right"
+                                Text="Detail &gt;"
+                                x:Name="PART_Detail" />
+                        </Grid>
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

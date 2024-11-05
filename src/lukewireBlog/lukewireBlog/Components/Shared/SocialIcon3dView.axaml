@@ -1,0 +1,85 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:avalonia="https://github.com/projektanker/icons.avalonia"
+    xmlns:icon="clr-namespace:SocialIcon.Icon;assembly=SocialIcon.Icon"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Styles.Resources>
+        <SolidColorBrush x:Key="FaceBook">#4362a5</SolidColorBrush>
+        <SolidColorBrush x:Key="Twitter">#1ca0f3</SolidColorBrush>
+        <SolidColorBrush x:Key="Instagram">#923b59</SolidColorBrush>
+        <SolidColorBrush x:Key="Linkedin">#2669b2</SolidColorBrush>
+        <SolidColorBrush x:Key="Youtube">#ff0000</SolidColorBrush>
+    </Styles.Resources>
+    <StyleInclude Source="avares://SocialIcon.Icon/Icon3D.axaml" />
+    <Style Selector="avalonia|Icon.size">
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+    <Style Selector="avalonia|Icon.facebook">
+        <Setter Property="Value" Value="fa-brands fa-facebook" />
+        <Setter Property="Foreground" Value="{DynamicResource FaceBook}" />
+    </Style>
+    <Style Selector="icon|Icon3D.facebook">
+        <Setter Property="BorderBrush" Value="{DynamicResource FaceBook}" />
+    </Style>
+    <Style Selector="avalonia|Icon.twitter">
+        <Setter Property="Value" Value="fa-brands fa-twitter" />
+        <Setter Property="Foreground" Value="{DynamicResource Twitter}" />
+    </Style>
+    <Style Selector="icon|Icon3D.twitter">
+        <Setter Property="BorderBrush" Value="{DynamicResource Twitter}" />
+    </Style>
+    <Style Selector="avalonia|Icon.instagram">
+        <Setter Property="Value" Value="fa-brands fa-instagram" />
+        <Setter Property="Foreground" Value="{DynamicResource Instagram}" />
+    </Style>
+    <Style Selector="icon|Icon3D.instagram">
+        <Setter Property="BorderBrush" Value="{DynamicResource Instagram}" />
+    </Style>
+    <Style Selector="avalonia|Icon.linkedin">
+        <Setter Property="Value" Value="fa-brands fa-linkedin" />
+        <Setter Property="Foreground" Value="{DynamicResource Linkedin}" />
+    </Style>
+    <Style Selector="icon|Icon3D.linkedin">
+        <Setter Property="BorderBrush" Value="{DynamicResource Linkedin}" />
+    </Style>
+    <Style Selector="avalonia|Icon.youtube">
+        <Setter Property="Value" Value="fa-brands fa-youtube" />
+        <Setter Property="Foreground" Value="{DynamicResource Youtube}" />
+    </Style>
+    <Style Selector="icon|Icon3D.youtube">
+        <Setter Property="BorderBrush" Value="{DynamicResource Youtube}" />
+    </Style>
+    <Design.PreviewWith>
+        <shared:SocialIcon3dView />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|SocialIcon3dView">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    VerticalAlignment="Center">
+                    <icon:Icon3D Classes="facebook" x:Name="PART_faceBook">
+                        <avalonia:Icon Classes="facebook size" />
+                    </icon:Icon3D>
+                    <icon:Icon3D Classes="twitter" x:Name="PART_twitter">
+                        <avalonia:Icon Classes="twitter size" />
+                    </icon:Icon3D>
+                    <icon:Icon3D Classes="instagram" x:Name="PART_instagram">
+                        <avalonia:Icon Classes="instagram size" />
+                    </icon:Icon3D>
+                    <icon:Icon3D Classes="linkedin" x:Name="PART_linkedin">
+                        <avalonia:Icon Classes="linkedin size" />
+                    </icon:Icon3D>
+                    <icon:Icon3D Classes="youtube" x:Name="PART_youtube">
+                        <avalonia:Icon Classes="youtube size" />
+                    </icon:Icon3D>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

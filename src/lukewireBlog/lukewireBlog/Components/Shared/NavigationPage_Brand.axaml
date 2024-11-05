@@ -1,0 +1,55 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:avaloniaNavigationView="clr-namespace:AvaloniaNavigationView;assembly=AvaloniaNavigationView"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:style="clr-namespace:AvaloniaNavigationBar.Style;assembly=AvaloniaNavigationBar"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/iPhone.axaml" />
+    <StyleInclude Source="avares://AvaloniaNavigationBar/Style/MagicBar.axaml" />
+    <StyleInclude Source="avares://AvaloniaNavigationView/NavigationView.axaml" />
+    <Style Selector="TextBlock.Title">
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="Foreground" Value="#2d2d2d" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource NotoSansKR}" />
+    </Style>
+    <Design.PreviewWith>
+        <shared:NavigationPage_Brand />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|NavigationPage_Brand">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <shared:iPhone>
+                    <shared:iPhone.Content>
+                        <Viewbox Stretch="Uniform">
+                            <avaloniaNavigationView:NavigationView
+                                Background="White"
+                                Height="750"
+                                Width="440">
+                                <avaloniaNavigationView:NavigationView.PageItems>
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                    <shared:AContentView />
+                                </avaloniaNavigationView:NavigationView.PageItems>
+                                <avaloniaNavigationView:NavigationView.NavigtorContent>
+                                    <style:MagicBar x:Name="PART_NAVI">
+                                        <ListBoxItem Content="Microsoft" Tag="{StaticResource Microsoft}" />
+                                        <ListBoxItem Content="Apple" Tag="{StaticResource Apple}" />
+                                        <ListBoxItem Content="Google" Tag="{StaticResource Google}" />
+                                        <ListBoxItem Content="Facebook" Tag="{StaticResource Facebook}" />
+                                        <ListBoxItem Content="Instagram" Tag="{StaticResource Instagram}" />
+                                    </style:MagicBar>
+                                </avaloniaNavigationView:NavigationView.NavigtorContent>
+                            </avaloniaNavigationView:NavigationView>
+                        </Viewbox>
+                    </shared:iPhone.Content>
+                </shared:iPhone>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

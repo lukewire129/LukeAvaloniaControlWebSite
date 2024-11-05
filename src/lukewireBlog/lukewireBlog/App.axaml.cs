@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using lukewireBlog.Domain.Main;
+using lukewireBlog.Components.Layout;
 using lukewireBlog.ViewModels;
 
 namespace lukewireBlog;
@@ -28,7 +28,7 @@ public partial class App : Application
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
-            singleViewPlatform.MainView = new Index()
+            singleViewPlatform.MainView = new MainLayout()
             {
                 DataContext = new MainViewModel()
             };

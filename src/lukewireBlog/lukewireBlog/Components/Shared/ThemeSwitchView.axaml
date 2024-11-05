@@ -1,0 +1,30 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:themeSwitch="clr-namespace:ThemeSwitch;assembly=ThemeSwitch"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://ThemeSwitch/ThemeSwitch.axaml" />
+    <Style Selector="Grid.Background">
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition Duration="0:0:0.5" Property="Background" />
+            </Transitions>
+        </Setter>
+    </Style>
+    <Design.PreviewWith>
+        <shared:ThemeSwitchView />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|ThemeSwitchView">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Background="{Binding Background}" Classes="Background">
+                    <Border Padding="50,20">
+                        <themeSwitch:ThemeSwitch IsChecked="{Binding IsChecked}" x:Name="PART_tg" />
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

@@ -39,18 +39,60 @@
         <DependentUpon>MainView.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Domain\Main\Components\SideMenu.cs">
-        <DependentUpon>SideMenu.axaml</DependentUpon>
-      </Compile>
-      <Compile Update="Domain\Main\Components\SideMenuItem.cs">
-        <DependentUpon>SideMenu.axaml</DependentUpon>
-      </Compile>
       <Compile Update="MainWindow.axaml.cs">
         <DependentUpon>MainWindow.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
-      <Compile Update="Domain\NavigationView\BrandNavigationView.axaml.cs">
-        <DependentUpon>BrandNavigationView.axaml</DependentUpon>
+      <Compile Update="Components\Controls\AContentView.axaml.cs">
+        <DependentUpon>AContentView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\ContentBox.axaml.cs">
+        <DependentUpon>ContentBox.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\ContentItem.axaml.cs">
+        <DependentUpon>ContentItem.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\iPhone.axaml.cs">
+        <DependentUpon>iPhone.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\NavigationPage_Brand.axaml.cs">
+        <DependentUpon>NavigationPage_Brand.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\NavigationPage_Custom1.axaml.cs">
+        <DependentUpon>NavigationPage_Custom1.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\NavigationView_Custom1.axaml.cs">
+        <DependentUpon>NavigationView_Custom1.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\NavigationView_MagicBar.axaml.cs">
+        <DependentUpon>NavigationView_MagicBar.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\RiotButtonView.axaml.cs">
+        <DependentUpon>RiotButtonView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\SmartDateView.axaml.cs">
+        <DependentUpon>SmartDateView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\SocialIcon3dView.axaml.cs">
+        <DependentUpon>SocialIcon3dView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Controls\ThemeSwitchView.axaml.cs">
+        <DependentUpon>ThemeSwitchView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Components\Layout\MainLayout.axaml.cs">
+        <DependentUpon>Index.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
@@ -88,6 +130,11 @@
 
     <ItemGroup>
       <UpToDateCheckInput Remove="Domain\About\Index.axaml" />
+      <UpToDateCheckInput Remove="Domain\NavigationBar\Index.axaml" />
+      <UpToDateCheckInput Remove="Domain\NavigationView\Index.axaml" />
+      <UpToDateCheckInput Remove="Domain\RiotPlayButton\Index.axaml" />
+      <UpToDateCheckInput Remove="Domain\SocialIcon\Index.axaml" />
+      <UpToDateCheckInput Remove="Domain\ThemeSwitch\Index.axaml" />
     </ItemGroup>
 
     <ItemGroup>

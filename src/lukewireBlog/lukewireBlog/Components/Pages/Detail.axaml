@@ -1,0 +1,53 @@
+<UserControl
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d"
+    x:Class="lukewireBlog.Components.Pages.Detail"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Styles>
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationView_MagicBar.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationView_Custom1.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationPage_Custom1.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/NavigationPage_Brand.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/RiotButtonView.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/SmartDateView.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/SocialIcon3dView.axaml" />
+        <StyleInclude Source="avares://lukewireBlog/Components/Shared/ThemeSwitchView.axaml" />
+    </UserControl.Styles>
+    <UserControl.Styles>
+        <Style Selector="Button#BackButton">
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <ContentPresenter Content="{TemplateBinding Content}" />
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+    <Border Padding="10">
+        <Grid RowDefinitions="30, *">
+            <Button
+                Command="{Binding BackCommand}"
+                Content="&lt; Back"
+                Cursor="hand"
+                FontSize="20"
+                Foreground="Black"
+                HorizontalAlignment="Left"
+                x:Name="BackButton" />
+            <Grid ColumnDefinitions="*,*" Grid.Row="1">
+                <Viewbox Grid.Column="0">
+                    <Border
+                        Background="#222222"
+                        BoxShadow="5 5 10 0 Gray"
+                        CornerRadius="10"
+                        Margin="30"
+                        Padding="20">
+                        <ContentControl Content="{Binding CurrentControl}" />
+                    </Border>
+                </Viewbox>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

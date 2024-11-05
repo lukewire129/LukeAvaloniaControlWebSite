@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Reactive.Concurrency;
-using System.Windows.Input;
-using lukewireBlog.Domain.Main.Models;
+﻿using System.Windows.Input;
+using Avalonia.Controls;
+using Avalonia.Threading;
+using CommunityToolkit.Mvvm.Messaging;
+using CommunityToolkit.Mvvm.Messaging.Messages;
+using lukewireBlog.Models.Messenger;
 using ReactiveUI;
 
 namespace lukewireBlog.ViewModels;
 
-public partial class MainViewModel : ReactiveObject
+public class MainViewModel : ReactiveObject
 {
     private ViewModelBase[] Pages;
     private ViewModelBase _CurrentPage;
@@ -17,40 +19,30 @@ public partial class MainViewModel : ReactiveObject
         set { this.RaiseAndSetIfChanged(ref _CurrentPage, value); }
     }
 
-    public List<TapMenuModel> SideMenus { get; set; } = new()
-    {
-        new TapMenuModel(0, "NavigationBar"),
-        new TapMenuModel(1, "NavigationView"),  
-        new TapMenuModel(2, "RiotPlayButton"),
-        new TapMenuModel(3, "DatePickerStyle"),
-        new TapMenuModel(4, "SocialICon"),
-        new TapMenuModel(5, "ThemeSwitch"),
-    };
-
-    public ICommand NavigateCommand { get; }
-
     public MainViewModel()
     {
         Pages = new ViewModelBase[]
         {
-            new NavigationBarViewModel(),
-            new NavigationViewViewModel(),
-            new RiotPlayButtonViewModel(),
-            new SmartDateViewModel(),
-            new SocialIconViewModel(),
-            new ThemeSwitchViewModel()
+            new DashBoardViewModel(),
+            new DetailViewModel(),
         };
-
-        Pages[0].Load();
         CurrentPage = Pages[0];
-
-        NavigateCommand = ReactiveCommand.Create<TapMenuModel>(async (model) =>
+        
+        WeakReferenceMessenger.Default.Register<RouteChangeMessage>(this, (r, m)=>
         {
-            var page = Pages[model.Idx];
-            RxApp.MainThreadScheduler.Schedule(() =>
+            Dispatcher.UIThread.InvokeAsync(() =>
             {
-                CurrentPage = page;
+                if (m.Value.Sender.GetType() == typeof(DashBoardViewModel))
+                {
+                    CurrentPage = Pages[1];
+                    ((DetailViewModel)CurrentPage).ControlLoad((Control)m.Value.Data);
+                }
+                else if (m.Value.Sender.GetType() == typeof(DetailViewModel))
+                {
+                    CurrentPage = Pages[0];
+                    ((DashBoardViewModel)CurrentPage).Load();
+                }
             });
-        }, outputScheduler: RxApp.TaskpoolScheduler);
+        });
     }
 }

@@ -1,0 +1,23 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:controls="using:lukewireBlog.Components.Shared"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://lukewireBlog/Components/Shared/ContentItem.axaml" />
+    <Design.PreviewWith>
+        <controls:ContentBox />
+    </Design.PreviewWith>
+    <Style Selector="controls|ContentBox">
+        <Setter Property="ItemsPanel">
+            <ItemsPanelTemplate>
+                <WrapPanel />
+            </ItemsPanelTemplate>
+        </Setter>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <ScrollViewer>
+                    <ItemsPresenter HorizontalAlignment="Center" ItemsPanel="{TemplateBinding ItemsPanel}" />
+                </ScrollViewer>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

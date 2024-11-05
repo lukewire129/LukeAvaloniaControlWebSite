@@ -12,10 +12,10 @@ public class ViewLocator : IDataTemplate
         if (data is null)
             return null;
 
-        var pathName = data.GetType().Namespace!.Replace("ViewModels", "Domain");
-        var folderName = data.GetType().Name!.Replace("ViewModel", "");
+        var pathName = data.GetType().Namespace!.Replace("ViewModels", "Components.Pages");
+        var folderName = data.GetType().Name!.Replace("ViewModel", "" );
         // var name = data.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        var type = Type.GetType($"{pathName}.{folderName}.Index");
+        var type = Type.GetType($"{pathName}.{folderName}");
         
         if (type != null)
         {

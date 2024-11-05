@@ -1,0 +1,21 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:shared="using:lukewireBlog.Components.Shared"
+    xmlns:units="clr-namespace:SmartDateControl.Themes.Units;assembly=SmartDateControl"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StyleInclude Source="avares://SmartDateControl/Themes/Units/SmartDate.axaml" />
+    <Design.PreviewWith>
+        <shared:SmartDateView />
+    </Design.PreviewWith>
+
+    <Style Selector="shared|SmartDateView">
+        <!--  Set Defaults  -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Viewbox Stretch="Uniform">
+                    <units:SmartDate KeepPopupOpen="False" Width="216" />
+                </Viewbox>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
