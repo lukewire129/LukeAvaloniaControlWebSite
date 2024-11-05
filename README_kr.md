@@ -1,4 +1,5 @@
 # Avalonia Web Control Collection
+[go](https://delightful-profiterole-0fa25d.netlify.app/)
 ## 프로젝트 소개
 이 저장소는 Avalonia에서 웹을 통해 UI를 구동할 수 있는지 테스트하는 과정에서 시작되었습니다. 처음에는 블로그 형태로 접근하려 했으나, Avalonia의 다양한 컨트롤을 보다 효과적으로 보여줄 방법을 고민하게 되었습니다. 그래서 제 Avalonia 컨트롤 소스들을 모아 하나의 컬렉션으로 정리하는 방향으로 전환하게 되었습니다.
 
@@ -14,9 +15,4 @@
 ### Git clone
 ```
 git clone --recurse-submodules https://github.com/lukewire129/lukewireBlogAvalonia.git
-```
-
-### ServerUrl
-```
-https://delightful-profiterole-0fa25d.netlify.app/
 ```
